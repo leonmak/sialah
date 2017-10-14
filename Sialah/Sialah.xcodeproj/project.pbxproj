@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		77661B8A1F92A5E3002B48FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77661B891F92A5E3002B48FF /* AppDelegate.swift */; };
-		77661B8C1F92A5E3002B48FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77661B8B1F92A5E3002B48FF /* ViewController.swift */; };
 		77661B8F1F92A5E3002B48FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77661B8D1F92A5E3002B48FF /* Main.storyboard */; };
 		77661B911F92A5E3002B48FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77661B901F92A5E3002B48FF /* Assets.xcassets */; };
 		77661B941F92A5E3002B48FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */; };
+		F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */; };
+		F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */; };
+		F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77661B861F92A5E3002B48FF /* Sialah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sialah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77661B891F92A5E3002B48FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77661B8B1F92A5E3002B48FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77661B8E1F92A5E3002B48FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77661B901F92A5E3002B48FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77661B931F92A5E3002B48FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77661B951F92A5E3002B48FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
+		F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentItineraryTableViewCell.swift; sourceTree = "<group>"; };
+		F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherItineraryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				77661B891F92A5E3002B48FF /* AppDelegate.swift */,
-				77661B8B1F92A5E3002B48FF /* ViewController.swift */,
 				77661B8D1F92A5E3002B48FF /* Main.storyboard */,
 				77661B901F92A5E3002B48FF /* Assets.xcassets */,
 				77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */,
 				77661B951F92A5E3002B48FF /* Info.plist */,
+				F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */,
+				F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */,
+				F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */,
 			);
 			path = Sialah;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77661B8C1F92A5E3002B48FF /* ViewController.swift in Sources */,
+				F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */,
+				F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */,
+				F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */,
 				77661B8A1F92A5E3002B48FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
