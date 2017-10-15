@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ik6-11-Q6x">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -223,6 +223,7 @@
                     <connections>
                         <outlet property="itineraryTableView" destination="iVp-Fg-amL" id="kkV-QP-PAI"/>
                         <segue destination="s1u-6j-An9" kind="show" identifier="infoCardSegue" id="EDU-TM-hBn"/>
+                        <segue destination="vh2-rS-PeL" kind="show" identifier="FoodVC" id="sGu-hU-HZ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -297,6 +298,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNJ-WH-3AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1735" y="-3"/>
+        </scene>
+        <!--FoodVC-->
+        <scene sceneID="MlV-7f-8bh">
+            <objects>
+                <viewController id="vh2-rS-PeL" customClass="FoodVC" customModule="Sialah" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZuV-Rb-pmu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rv-JZ-TL8">
+                                <rect key="frame" x="15" y="110" width="345" height="542"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Near You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRN-Ec-jjt">
+                                <rect key="frame" x="15" y="50" width="345" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tA5-D0-JKX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cRN-Ec-jjt" firstAttribute="leading" secondItem="vnc-Hw-Rii" secondAttribute="leading" constant="15" id="IAC-UY-J64"/>
+                            <constraint firstItem="vnc-Hw-Rii" firstAttribute="bottom" secondItem="1Rv-JZ-TL8" secondAttribute="bottom" constant="15" id="IH1-gT-isL"/>
+                            <constraint firstItem="1Rv-JZ-TL8" firstAttribute="top" secondItem="cRN-Ec-jjt" secondAttribute="bottom" constant="15" id="QgX-VO-HHk"/>
+                            <constraint firstItem="cRN-Ec-jjt" firstAttribute="top" secondItem="vnc-Hw-Rii" secondAttribute="top" constant="30" id="XTB-KB-SZF"/>
+                            <constraint firstItem="1Rv-JZ-TL8" firstAttribute="leading" secondItem="vnc-Hw-Rii" secondAttribute="leading" constant="15" id="oci-dt-tHd"/>
+                            <constraint firstItem="vnc-Hw-Rii" firstAttribute="trailing" secondItem="cRN-Ec-jjt" secondAttribute="trailing" constant="15" id="oia-bL-cwa"/>
+                            <constraint firstItem="vnc-Hw-Rii" firstAttribute="trailing" secondItem="1Rv-JZ-TL8" secondAttribute="trailing" constant="15" id="x7M-b6-JUr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vnc-Hw-Rii"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="cRN-Ec-jjt" id="5Ik-eB-Obx"/>
+                        <outlet property="scrollView" destination="1Rv-JZ-TL8" id="RWH-na-S6t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OmJ-KW-gWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="894.60269865067471"/>
         </scene>
         <!--CouponVC-->
         <scene sceneID="iFG-7h-bBP">
@@ -507,11 +550,12 @@
                     <connections>
                         <outlet property="layoverBorder" destination="8aX-hx-m39" id="57U-C4-jQQ"/>
                         <outlet property="stopoverBorder" destination="Vi5-vj-OuH" id="pjl-oZ-rPq"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ItineraryVC" id="jCX-Vj-FKx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="je6-lY-VN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="-51"/>
+            <point key="canvasLocation" x="-206" y="64"/>
         </scene>
     </scenes>
     <resources>
