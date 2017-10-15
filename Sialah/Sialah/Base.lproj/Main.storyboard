@@ -165,12 +165,16 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <connections>
                                                                 <outlet property="backgroundImageView" destination="It4-rn-Und" id="srM-bn-eQa"/>
+                                                                <outlet property="busLabel" destination="WWc-vl-eAU" id="Hg2-4j-SUJ"/>
                                                                 <outlet property="card" destination="dB5-vB-rmW" id="zKf-RG-Hgj"/>
                                                                 <outlet property="directionsButton" destination="Uh1-Uv-MUg" id="BP8-l4-asr"/>
                                                                 <outlet property="doneButton" destination="AR2-Ai-Bp0" id="IiP-ox-5fB"/>
                                                                 <outlet property="itineraryTitle" destination="Yvq-eY-HTK" id="X61-XA-Fy5"/>
+                                                                <outlet property="openingHoursLabel" destination="wh5-Wq-dtz" id="7h9-ya-PyF"/>
                                                                 <outlet property="overlayView" destination="Ms6-a5-gEh" id="ty0-IW-KS8"/>
+                                                                <outlet property="ratingLabel" destination="7sa-G9-ZBk" id="X0Z-pH-699"/>
                                                                 <outlet property="ticketsButton" destination="k8L-fy-ZSi" id="glW-7f-0Df"/>
+                                                                <outlet property="wifiLabel" destination="0jA-XE-LMZ" id="QKc-nm-hyX"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>

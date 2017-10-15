@@ -90,7 +90,7 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
         let columnIndex = indexPath.row
         cell.backgroundImageView.image = UIImage(named: Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].wallImageName!)
         cell.itineraryTitle.text = Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].name
-
+        cell.ratingLabel.text = String(describing: "\(Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].rating!) ☆")
         return cell
     }
 

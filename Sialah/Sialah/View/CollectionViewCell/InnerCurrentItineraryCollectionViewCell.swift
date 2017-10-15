@@ -19,6 +19,10 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ticketsButton: DynamicButton!
     @IBOutlet weak var doneButton: DynamicButton!
 
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var wifiLabel: UILabel!
+    @IBOutlet weak var busLabel: UILabel!
+    @IBOutlet weak var openingHoursLabel: UILabel!
     var rowIndex: Int?
     var modelIndex: Int?
 

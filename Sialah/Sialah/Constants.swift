@@ -24,7 +24,7 @@ struct Constants {
                 """,
                  wallImageName: "zoo",
                  ticketImageName: "zoo-ticket",
-                 qrcodeName: "qrcode")
+                 qrcodeName: "qrcode", rating: 4.5)
 
     static let defaultInfoStopover =
         Stopover(name: "Merlion Park",
@@ -32,33 +32,34 @@ struct Constants {
                  panoImageName: "merlion-pano",
                  wallImageName: "merlion",
                  qrcodeName: "qrcode",
-                 events: ["50% Discounts on all hawker center food and drinks"])
+                 events: ["50% Discounts on all hawker center food and drinks"],
+                 rating: 4.5)
 
     static let stopoverList = [
         Stopover(name: "Hyatt Hotel", description:"""
                 A 5-minute walk from Orchard MRT Station, Grand Hyatt Singapore offers luxurious accommodation, an elegant outdoor pool and 6 dining options including the award-winning restaurant mezza9. There is also a spa.
                 """,
-                 panoImageName: "hotel-pano", wallImageName: "hotel"),
+                 panoImageName: "hotel-pano", wallImageName: "hotel", rating: 4.5),
         Stopover(name: "Gardens By the Bay", description:"""
                 Gardens by the Bay is a nature park spanning 101 hectares (250 acres) of reclaimed land in central Singapore, adjacent to the Marina Reservoir. The park consists of three waterfront gardens: Bay South Garden, Bay East Garden and Bay Central Garden. The largest of the gardens is Bay South Garden at 54 hectares (130 acres).
                 """,
                  openingHours: "5am – 2am daily",
                  panoImageName: "bay-gardens-pano", wallImageName: "bay-gardens",
                  wirelessInfo: "Free WiFi (wireless@SG): Available at The Canopy, Supertree Grove and The Meadow.",
-                 categories: [Category.adventure, Category.arts], url: URL(string: "http://www.gardensbythebay.com.sg/")),
+                 categories: [Category.adventure, Category.arts], url: URL(string: "http://www.gardensbythebay.com.sg/"), rating: 4.7),
         Stopover(name: "Botanical Gardens", description: """
                 The Singapore Botanic Gardens is a 158-year-old tropical garden located at the fringe of Singapore's Orchard Roadshopping district. It is one of three gardens, and the only tropical garden, to be honoured as a UNESCO World Heritage Site. The Botanic Gardens has been ranked Asia's top park attraction since 2013, by TripAdvisor Travellers' Choice Awards. It was declared the inaugural Garden of the Year, International Garden Tourism Awards in 2012, and received Michelin's three-star rating in 2008.
                 """,
                  openingHours: "5am-12am daily",
                  panoImageName: "botanic-gardens-pano", wallImageName: "botanic-gardens",
-                 wirelessInfo: "None", categories: [Category.adventure], url: URL(string: "https://www.sbg.org.sg/")),
+                 wirelessInfo: "None", categories: [Category.adventure], url: URL(string: "https://www.sbg.org.sg/"), rating: 4.6),
         Stopover(name: "Chinatown", description: """
                 Singapore’s historic Chinatown is a bustling mix of old and new, filled with traditional shops and markets as well as cool stores and cafes.
                 """,
                  wallImageName: "chinatown", wirelessInfo: "None",
                  categories: [Category.foodie],
                  events: ["25% Discounts on 'char kway teow' (stir-fried noodles) and 'satay' (barbecued meat skewers) at Chinatown Food Street"],
-                 url: URL(string: "http://www.visitsingapore.com/see-do-singapore/places-to-see/chinatown.html")),
+                 url: URL(string: "http://www.visitsingapore.com/see-do-singapore/places-to-see/chinatown.html"), rating: 4.3),
         Constants.defaultInfoStopover,
         Constants.zooStopover
     ]

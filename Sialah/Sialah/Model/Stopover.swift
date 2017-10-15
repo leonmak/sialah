@@ -21,7 +21,7 @@ class Stopover {
     var events: [String] = []
     var isClosingSoon: Bool=false
     var url: URL?
-    var cardImageName: String?
+    var rating: Float?
     
     init(name: String,
          description: String,
@@ -33,7 +33,8 @@ class Stopover {
          wirelessInfo: String?=nil,
          categories: [Category] = [],
          events: [String] = [],
-         url: URL?=nil) {
+         url: URL?=nil,
+         rating: Float?=5.0) {
         self.name = name
         self.description = description
         self.openingHours = openingHours
@@ -45,6 +46,7 @@ class Stopover {
         self.categories = categories
         self.events = events
         self.url = url
+        self.rating = rating
     }
     
     
