@@ -75,7 +75,7 @@
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvq-eY-HTK">
                                                                                 <rect key="frame" x="8" y="8" width="322" height="59"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -84,7 +84,7 @@
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh1-Uv-MUg" customClass="DynamicButton" customModule="DynamicButton">
-                                                                                        <rect key="frame" x="98" y="183" width="50" height="50"/>
+                                                                                        <rect key="frame" x="226" y="183" width="50" height="50"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                         <state key="normal" image="icon_map"/>
@@ -95,7 +95,7 @@
                                                                                         </userDefinedRuntimeAttributes>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-fy-ZSi" customClass="DynamicButton" customModule="DynamicButton">
-                                                                                        <rect key="frame" x="185" y="183" width="50" height="50"/>
+                                                                                        <rect key="frame" x="294" y="183" width="50" height="50"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                         <state key="normal" image="icons_ticket"/>
@@ -105,17 +105,34 @@
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
                                                                                     </button>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YR-ap-LBN" userLabel="More Button" customClass="DynamicButton" customModule="DynamicButton">
-                                                                                        <rect key="frame" x="276" y="183" width="50" height="50"/>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-c3-7wA">
+                                                                                        <rect key="frame" x="31" y="83" width="313" height="21"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                                                        <state key="normal" image="icons_more"/>
-                                                                                        <userDefinedRuntimeAttributes>
-                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                                                                <real key="value" value="0.0"/>
-                                                                                            </userDefinedRuntimeAttribute>
-                                                                                        </userDefinedRuntimeAttributes>
-                                                                                    </button>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opening Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh5-Wq-dtz">
+                                                                                        <rect key="frame" x="31" y="112" width="158" height="21"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wifi Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jA-XE-LMZ">
+                                                                                        <rect key="frame" x="197" y="111" width="158" height="21"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bus " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWc-vl-eAU">
+                                                                                        <rect key="frame" x="166" y="111" width="92" height="21"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             </view>
@@ -129,7 +146,6 @@
                                                                 <outlet property="backgroundImageView" destination="It4-rn-Und" id="srM-bn-eQa"/>
                                                                 <outlet property="directionsButton" destination="Uh1-Uv-MUg" id="BP8-l4-asr"/>
                                                                 <outlet property="itineraryTitle" destination="Yvq-eY-HTK" id="X61-XA-Fy5"/>
-                                                                <outlet property="moreButton" destination="7YR-ap-LBN" id="xJj-eU-q0a"/>
                                                                 <outlet property="ticketsButton" destination="k8L-fy-ZSi" id="glW-7f-0Df"/>
                                                             </connections>
                                                         </collectionViewCell>
@@ -233,7 +249,6 @@
     <resources>
         <image name="Merlion-Sentosa-1024x675" width="1024" height="675"/>
         <image name="icon_map" width="50" height="50"/>
-        <image name="icons_more" width="50" height="50"/>
         <image name="icons_ticket" width="50" height="50"/>
     </resources>
 </document>

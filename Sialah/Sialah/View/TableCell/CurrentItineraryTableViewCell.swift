@@ -80,7 +80,6 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
     private func prepareButtons(for cell: InnerCurrentItineraryCollectionViewCell) {
         prepare(button: cell.directionsButton)
         prepare(button: cell.ticketsButton)
-        prepare(button: cell.moreButton)
     }
 
     private func prepare(button: DynamicButton) {
@@ -88,6 +87,11 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
         button.contentMode = .center
         button.imageView?.contentMode = .center
         button.imageView?.contentScaleFactor = 1.5
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        button.layer.shadowRadius = 1
+        button.layer.shadowOpacity = 0.3
+        button.layer.masksToBounds = false
     }
 
 }
