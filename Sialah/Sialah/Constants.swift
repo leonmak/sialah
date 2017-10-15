@@ -35,7 +35,9 @@ struct Constants {
                  events: ["50% Discounts on all hawker center food and drinks"],
                  rating: 4.5)
 
-    static let stopoverList = [
+    static let stopoverList = _stopoverList + _stopoverList + _stopoverList + _stopoverList
+
+    static let _stopoverList = [
         Stopover(name: "Hyatt Hotel", description:"""
                 A 5-minute walk from Orchard MRT Station, Grand Hyatt Singapore offers luxurious accommodation, an elegant outdoor pool and 6 dining options including the award-winning restaurant mezza9. There is also a spa.
                 """,

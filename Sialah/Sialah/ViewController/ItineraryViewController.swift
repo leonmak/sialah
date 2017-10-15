@@ -59,6 +59,9 @@ class ItineraryViewController: UIViewController {
 
         currentIndex += 1
         itineraryTableView.reloadRows(at: [IndexPath(row: rowIndex, section: 0), IndexPath(row: rowIndex+1, section: 0)], with: .fade)
+        DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0.2)) {
+            self.itineraryTableView.scrollToRow(at: IndexPath(row: self.currentIndex, section: 0), at: .top, animated: true)
+        }
     }
 
     private func setupMenuButton() {
