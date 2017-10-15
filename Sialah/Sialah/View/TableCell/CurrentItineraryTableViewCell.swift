@@ -120,10 +120,10 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
             return cell
         }
 
-        cell.modelIndex = (columnIndex + self.rowIndex!) % Constants.stopoverList.count
+        cell.modelIndex = (columnIndex + self.rowIndex! + Constants.stopoverList.count - 1) % Constants.stopoverList.count
         cell.card._delegate = cell
-        cell.backgroundImageView.image = UIImage(named: Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].wallImageName!)
-        let stopover = Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count]
+        cell.backgroundImageView.image = UIImage(named: Constants.stopoverList[cell.modelIndex!].wallImageName!)
+        let stopover = Constants.stopoverList[cell.modelIndex!]
         cell.itineraryTitle.text = stopover.name
         cell.ratingLabel.text = String(describing: "\(stopover.rating!) ☆")
         if let busColor = stopover.busColor {
