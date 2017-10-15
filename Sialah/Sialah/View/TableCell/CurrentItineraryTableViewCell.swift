@@ -91,8 +91,24 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
         cell.modelIndex = (columnIndex + self.rowIndex!) % Constants.stopoverList.count
         cell.card._delegate = cell
         cell.backgroundImageView.image = UIImage(named: Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].wallImageName!)
-        cell.itineraryTitle.text = Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].name
-        cell.ratingLabel.text = String(describing: "\(Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].rating!) ☆")
+        let stopover = Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count]
+        cell.itineraryTitle.text = stopover.name
+        cell.ratingLabel.text = String(describing: "\(stopover.rating!) ☆")
+        if let busColor = stopover.busColor {
+            cell.busLabel.text = "\(busColor.capitalized) Bus line"
+            cell.busLabel.textColor = busColor.toColor()
+        }
+        if let wirelessInfo = stopover.wirelessInfo {
+            cell.wifiLabel.text = "\(wirelessInfo.capitalized)"
+        } else {
+            cell.wifiLabel.text = "No public Wifi available"
+        }
+        if let openingHours = stopover.openingHours {
+            cell.openingHoursLabel.text = "Open: \(openingHours)"
+        } else {
+            cell.openingHoursLabel.text = ""
+        }
+        
         return cell
     }
 
