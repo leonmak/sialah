@@ -28,4 +28,7 @@ class SelectionViewController: UIViewController {
         stopoverBorder.layer.cornerRadius = 20
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
