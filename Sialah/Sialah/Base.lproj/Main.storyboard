@@ -93,6 +93,9 @@
                                                                                                 <real key="value" value="0.0"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="handleDirectionsButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="4zN-sK-FzO"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-fy-ZSi" customClass="DynamicButton" customModule="DynamicButton">
                                                                                         <rect key="frame" x="294" y="183" width="50" height="50"/>
@@ -104,6 +107,9 @@
                                                                                                 <real key="value" value="0.0"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="handleTicketButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="OtS-qa-zSB"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-c3-7wA">
                                                                                         <rect key="frame" x="31" y="90" width="313" height="21"/>

@@ -16,4 +16,12 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var directionsButton: DynamicButton!
     @IBOutlet weak var ticketsButton: DynamicButton!
 
+    var modelIndex: Int?
+
+    @IBAction func handleDirectionsButtonPressed(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.google.com/maps/search/?api=1&query=centurylink+field")!, options: [:], completionHandler: nil)
+    }
+
+    @IBAction func handleTicketButtonPressed(_ sender: Any) {
+    }
 }
