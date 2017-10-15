@@ -9,7 +9,7 @@
 import Foundation
 
 class Stopover {
-    var name: String
+var name: String
     var description: String
     var openingHours: String?
     var wallImageName: String?

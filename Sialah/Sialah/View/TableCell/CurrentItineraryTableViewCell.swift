@@ -119,6 +119,16 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
             cell.ticketsButton.isHidden = true
             cell.directionsButton.isEnabled = false
             cell.ticketsButton.isEnabled = false
+
+            if cell.itineraryTitle.text! != "Arrival" {
+                cell.checklistButton.isHidden = true
+                cell.checklistButton.isEnabled = false
+                cell.directionsButton.isHidden = false
+                cell.ticketsButton.isHidden = false
+                cell.directionsButton.isEnabled = true
+                cell.ticketsButton.isEnabled = true
+            }
+
             return cell
         }
 
@@ -141,6 +151,15 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
             cell.openingHoursLabel.text = "Open: \(openingHours)"
         } else {
             cell.openingHoursLabel.text = ""
+        }
+
+        if cell.itineraryTitle.text! != "Arrival" {
+            cell.checklistButton.isHidden = true
+            cell.checklistButton.isEnabled = false
+            cell.directionsButton.isHidden = false
+            cell.ticketsButton.isHidden = false
+            cell.directionsButton.isEnabled = true
+            cell.ticketsButton.isEnabled = true
         }
         
         return cell
