@@ -109,7 +109,6 @@
                                                                                         </userDefinedRuntimeAttributes>
                                                                                         <connections>
                                                                                             <action selector="handleDoneButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="USG-oK-Dod"/>
-                                                                                            <action selector="handleTicketButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="Pth-gU-sjO"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wifi Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jA-XE-LMZ">
@@ -223,6 +222,7 @@
                     <connections>
                         <outlet property="itineraryTableView" destination="iVp-Fg-amL" id="kkV-QP-PAI"/>
                         <segue destination="s1u-6j-An9" kind="show" identifier="infoCardSegue" id="EDU-TM-hBn"/>
+                        <segue destination="nUx-vp-rDw" kind="show" identifier="ticketButtonSegue" id="hiT-3E-RBL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -524,4 +524,7 @@
         <image name="icons_done" width="50" height="50"/>
         <image name="icons_ticket" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hiT-3E-RBL"/>
+    </inferredMetricsTieBreakers>
 </document>

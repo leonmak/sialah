@@ -53,6 +53,7 @@ class ItineraryViewController: UIViewController {
     private func setupNotificationHandlers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleDoneButtonPressed(_:)), name: Notification.Name(rawValue: "doneButtonPressed"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleInfoCardPressed(_:)), name: Notification.Name(rawValue: "infoCardPressed"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleTicketButtonPressed(_:)), name: Notification.Name(rawValue: "ticketButtonPressed"), object: nil)
     }
 
     @objc private func handleDoneButtonPressed(_ notification: Notification) {
@@ -67,8 +68,12 @@ class ItineraryViewController: UIViewController {
 
     @objc private func handleInfoCardPressed(_ notification: Notification) {
         let modelIndex = notification.userInfo!["modelIndex"] as! Int
-        print("pressed")
         self.performSegue(withIdentifier: "infoCardSegue", sender: modelIndex)
+    }
+
+    @objc private func handleTicketButtonPressed(_ notification: Notification) {
+        let modelIndex = notification.userInfo!["modelIndex"] as! Int
+        self.performSegue(withIdentifier: "ticketButtonSegue", sender: modelIndex)
     }
 
     private func setupMenuButton() {
@@ -98,6 +103,9 @@ class ItineraryViewController: UIViewController {
         switch segue.identifier! {
         case "infoCardSegue":
             let destVC = segue.destination as! InfoVC
+            destVC.stopover = Constants.stopoverList[sender as! Int]
+        case "ticketButtonSegue":
+            let destVC = segue.destination as! CouponVC
             destVC.stopover = Constants.stopoverList[sender as! Int]
         default:
             return

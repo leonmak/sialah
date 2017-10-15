@@ -31,6 +31,7 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func handleTicketButtonPressed(_ sender: Any) {
+        NotificationCenter.default.post(Notification(name: Notification.Name("ticketButtonPressed"), object: self, userInfo: ["modelIndex": self.modelIndex!]))
     }
 
     @IBAction func handleDoneButtonPressed(_ sender: Any) {
