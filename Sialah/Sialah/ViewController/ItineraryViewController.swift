@@ -17,6 +17,7 @@ class ItineraryViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         itineraryTableView.dataSource = self
+        itineraryTableView.delegate = self
     }
     
 
@@ -32,6 +33,16 @@ class ItineraryViewController: UIViewController {
 
 }
 
+// - MARK: UITableViewDelegate
+extension ItineraryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 280
+        }
+        return 140
+    }
+}
+
 // - MARK: UITableViewDataSource
 extension ItineraryViewController: UITableViewDataSource {
     
@@ -40,16 +51,15 @@ extension ItineraryViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.section == 1 {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentItineraryTableViewCell", for: indexPath) as! CurrentItineraryTableViewCell
-        cell.testLabel.text = "ASDS"
-        return cell
-//        }
-//
-//        return tableView.dequeueReusableCell(withIdentifier: "OtherItineraryTableViewCell", for: indexPath) as! OtherItineraryTableViewCell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentItineraryTableViewCell", for: indexPath) as! CurrentItineraryTableViewCell
+            return cell
+        }
+
+        return tableView.dequeueReusableCell(withIdentifier: "OtherItineraryTableViewCell", for: indexPath) as! OtherItineraryTableViewCell
     }
 }
