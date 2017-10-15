@@ -28,17 +28,30 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Huge Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q3-GS-o8q">
-                                                    <rect key="frame" x="65" y="86" width="226" height="91"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lfz-Hl-CaO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <prototypes>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InnerCurrentIntineraryTableViewCell" id="bKT-KK-H8u">
+                                                            <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bKT-KK-H8u" id="G7A-qA-dGL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </tableViewCellContentView>
+                                                        </tableViewCell>
+                                                    </prototypes>
+                                                </tableView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Lfz-Hl-CaO" secondAttribute="bottom" id="1lm-Ys-Jfj"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lfz-Hl-CaO" secondAttribute="trailing" id="WTn-xP-2zF"/>
+                                                <constraint firstItem="Lfz-Hl-CaO" firstAttribute="leading" secondItem="lzf-Uz-i7z" secondAttribute="leading" id="eeR-eu-Ebh"/>
+                                                <constraint firstItem="Lfz-Hl-CaO" firstAttribute="top" secondItem="lzf-Uz-i7z" secondAttribute="top" id="hDN-Tu-rHG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="testLabel" destination="2Q3-GS-o8q" id="GhZ-bP-qOO"/>
+                                            <outlet property="innerItineraryTableView" destination="Lfz-Hl-CaO" id="ymE-Xe-yyA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OtherItineraryTableViewCell" rowHeight="140" id="6bT-6C-pZ5" customClass="OtherItineraryTableViewCell" customModule="Sialah" customModuleProvider="target">
