@@ -17,6 +17,7 @@ class Stopover {
     var ticketImageName: String?
     var qrcodeName: String?
     var wirelessInfo: String?
+    var busColor: String?
     var categories: [Category] = []
     var events: [String] = []
     var isClosingSoon: Bool=false
@@ -31,6 +32,7 @@ class Stopover {
          ticketImageName: String?=nil,
          qrcodeName: String?=nil,
          wirelessInfo: String?=nil,
+         busColor: String?=nil,
          categories: [Category] = [],
          events: [String] = [],
          url: URL?=nil,
@@ -42,6 +44,7 @@ class Stopover {
         self.wallImageName = wallImageName
         self.ticketImageName = ticketImageName
         self.qrcodeName = qrcodeName
+        self.busColor = busColor
         self.wirelessInfo = wirelessInfo
         self.categories = categories
         self.events = events

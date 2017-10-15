@@ -19,3 +19,15 @@ extension UIViewController {
     func RevX(_ percentage: CGFloat, width: CGFloat ) -> CGFloat { return (rect.width - percentage*rect.width/100) - width }
     func RevY(_ percentage: CGFloat, height: CGFloat) -> CGFloat { return (rect.height - percentage*rect.height/100) - height }
 }
+
+extension String {
+    func toColor() -> UIColor {
+        switch self {
+        case "yellow": return UIColor.flatYellow
+        case "red": return UIColor.flatRed
+        case "blue": return UIColor.flatBlue
+        case "brown": return UIColor.flatBrown
+        default: return UIColor.flatBlack
+        }
+    }
+}
