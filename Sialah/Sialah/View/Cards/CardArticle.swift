@@ -59,7 +59,7 @@ class CardArticle: Card {
         //Draw
         super.draw(rect)
         
-        categoryLbl.frame = CGRect(x: X(insets), y: X(insets), width: X(100-(insets*2)), height: Y(5))
+        categoryLbl.frame = CGRect(x: X(insets), y: X(insets), width: X(100-(insets*2)), height: Y(15))
         categoryLbl.text = category.uppercased()
         categoryLbl.textColor = textColor.withAlphaComponent(0.3)
         categoryLbl.font = UIFont.systemFont(ofSize: 100, weight: .bold)

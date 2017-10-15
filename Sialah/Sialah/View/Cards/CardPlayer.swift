@@ -9,20 +9,20 @@
 import Foundation
 import UIKit
 
-@IBDesignable class CardPlayer: Card {
+class CardPlayer: Card {
     
     // SB Vars
-    @IBInspectable var title: String = "Big Buck Bunny"
-    @IBInspectable var titleSize: CGFloat = 26
-    @IBInspectable var subtitle: String = "Inside the extraordinary world of Buck Bunny"
-    @IBInspectable var subtitleSize: CGFloat = 19
-    @IBInspectable var category: String = "today's movie"
-    @IBInspectable var playBtnSize: CGFloat = 56
-    @IBInspectable var playImage: UIImage?
-    @IBInspectable var playerCover: UIImage?
-    @IBInspectable var isAutoplayEnabled: Bool = false
-    @IBInspectable var shouldRestartVideoWhenPlaybackEnds: Bool = true
-    @IBInspectable var videoSource: URL? = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+    var title: String = "Big Buck Bunny"
+    var titleSize: CGFloat = 26
+    var subtitle: String = "Inside the extraordinary world of Buck Bunny"
+    var subtitleSize: CGFloat = 19
+    var category: String = "today's movie"
+    var playBtnSize: CGFloat = 56
+    var playImage: UIImage?
+    var playerCover: UIImage?
+    var isAutoplayEnabled: Bool = false
+    var shouldRestartVideoWhenPlaybackEnds: Bool = true
+    var videoSource: URL? = URL(string: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
     
     // Delegate
     var delegate: CardDelegate?
