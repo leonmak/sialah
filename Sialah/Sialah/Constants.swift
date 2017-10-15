@@ -35,14 +35,7 @@ struct Constants {
                  events: ["50% Discounts on all hawker center food and drinks"])
 
     static let stopoverList = [
-        Stopover(name: "Changi Airport", description: """
-                Singapore Changi Airport or simply Changi Airport, is the primary civilian airport for Singapore, and one of the largest transportation hubs in Southeast Asia. It is currently rated the World's Best Airport by Skytrax, for the fifth consecutive year (Skytrax's World's Best Airport 2013–2017)[5] and is one of the world's busiest airports by international passenger and cargo traffic. This international airport is located in Changi, at the eastern end of Singapore, approximately 17.2 kilometres (10.7 mi) northeast[6] from Marina Bay (Singapore's Downtown Core), on a 13-square-kilometre (5.0 sq mi) site. It is operated by Changi Airport Group and it is the home base of Singapore Airlines, Singapore Airlines Cargo, SilkAir, Scoot, Jetstar Asia Airways and BOC Aviation.
-                """,
-                 openingHours: "24Hrs",
-                 wallImageName: "airport",
-                 wirelessInfo: "Connect to WiFi@Changi and follow prompts",
-                 categories: [Category.airport], url: URL(string: "http://www.changiairport.com")),
-        Stopover(name: "Hyatt Hoten", description:"""
+        Stopover(name: "Hyatt Hotel", description:"""
                 A 5-minute walk from Orchard MRT Station, Grand Hyatt Singapore offers luxurious accommodation, an elegant outdoor pool and 6 dining options including the award-winning restaurant mezza9. There is also a spa.
                 """,
                  panoImageName: "hotel-pano", wallImageName: "hotel"),
@@ -65,6 +58,8 @@ struct Constants {
                  wallImageName: "chinatown", wirelessInfo: "None",
                  categories: [Category.foodie],
                  events: ["25% Discounts on 'char kway teow' (stir-fried noodles) and 'satay' (barbecued meat skewers) at Chinatown Food Street"],
-                 url: URL(string: "http://www.visitsingapore.com/see-do-singapore/places-to-see/chinatown.html"))
+                 url: URL(string: "http://www.visitsingapore.com/see-do-singapore/places-to-see/chinatown.html")),
+        Constants.defaultInfoStopover,
+        Constants.zooStopover
     ]
 }

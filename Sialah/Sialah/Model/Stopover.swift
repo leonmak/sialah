@@ -21,6 +21,7 @@ class Stopover {
     var events: [String] = []
     var isClosingSoon: Bool=false
     var url: URL?
+    var cardImageName: String?
     
     init(name: String,
          description: String,

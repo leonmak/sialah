@@ -73,7 +73,7 @@ extension CurrentItineraryTableViewCell: UICollectionViewDelegate {
 extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return Constants.stopoverList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -86,6 +86,11 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
         cell.overlayView.frame.size = CGSize(width: cell.overlayView.frame.width, height: self._contentHeight)
         cell.backgroundImageView.frame.size = CGSize(width: cell.backgroundImageView.frame.width, height: self._contentHeight)
         prepareButtons(for: cell)
+
+        let columnIndex = indexPath.row
+        cell.backgroundImageView.image = UIImage(named: Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].wallImageName!)
+        cell.itineraryTitle.text = Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].name
+
         return cell
     }
 
