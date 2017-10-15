@@ -31,6 +31,7 @@
 		F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */; };
 		F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */; };
 		F1044C651F931F0200AA70BB /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1044C641F931F0200AA70BB /* PassThroughView.swift */; };
+		F15895FD1F93C40300CF5598 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15895FC1F93C40300CF5598 /* SelectionViewController.swift */; };
 		F1D53C781F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D53C771F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift */; };
 		F1D53C7D1F9362FF004DC156 /* CircleExpandingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D53C7A1F9361F6004DC156 /* CircleExpandingMenu.swift */; };
 		F1D53C7E1F9362FF004DC156 /* CircleExpandingMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D53C7B1F9361F6004DC156 /* CircleExpandingMenuButton.swift */; };
@@ -68,6 +69,8 @@
 		F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentItineraryTableViewCell.swift; sourceTree = "<group>"; };
 		F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherItineraryTableViewCell.swift; sourceTree = "<group>"; };
 		F1044C641F931F0200AA70BB /* PassThroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
+		F15895FB1F93C2B500CF5598 /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = home.storyboard; path = ../../../../../../Downloads/home.storyboard; sourceTree = "<group>"; };
+		F15895FC1F93C40300CF5598 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		F1D53C771F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCurrentItineraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1D53C7A1F9361F6004DC156 /* CircleExpandingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleExpandingMenu.swift; sourceTree = "<group>"; };
 		F1D53C7B1F9361F6004DC156 /* CircleExpandingMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleExpandingMenuButton.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 				77361E241F92EAC1008D94C0 /* InfoVC.swift */,
 				F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */,
 				77361E5F1F92FD8F008D94C0 /* CouponVC.swift */,
+				F15895FC1F93C40300CF5598 /* SelectionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -177,6 +181,7 @@
 				77361E1C1F92EA6B008D94C0 /* View */,
 				77661B891F92A5E3002B48FF /* AppDelegate.swift */,
 				77661B8D1F92A5E3002B48FF /* Main.storyboard */,
+				F15895FB1F93C2B500CF5598 /* home.storyboard */,
 				77661B901F92A5E3002B48FF /* Assets.xcassets */,
 				77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */,
 				77661B951F92A5E3002B48FF /* Info.plist */,
@@ -349,6 +354,7 @@
 				77361E561F92EC1E008D94C0 /* CardPlayer.swift in Sources */,
 				F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */,
 				77361E5A1F92EC1E008D94C0 /* CardHighlight.swift in Sources */,
+				F15895FD1F93C40300CF5598 /* SelectionViewController.swift in Sources */,
 				F1D53C7D1F9362FF004DC156 /* CircleExpandingMenu.swift in Sources */,
 				F1D53C7E1F9362FF004DC156 /* CircleExpandingMenuButton.swift in Sources */,
 				F1D53C7F1F9362FF004DC156 /* CircleExpandingMenuDelegate.swift in Sources */,
@@ -509,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8GMX3JSSQ7;
+				DEVELOPMENT_TEAM = 93J5N959FE;
 				INFOPLIST_FILE = Sialah/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Maklemak.Sialah;
@@ -525,7 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8GMX3JSSQ7;
+				DEVELOPMENT_TEAM = 93J5N959FE;
 				INFOPLIST_FILE = Sialah/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Maklemak.Sialah;
