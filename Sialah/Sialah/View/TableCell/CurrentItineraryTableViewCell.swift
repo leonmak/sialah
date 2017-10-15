@@ -73,13 +73,15 @@ extension CurrentItineraryTableViewCell: UICollectionViewDelegate {
 extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard self.rowIndex! > 0 else {
+            return 1
+        }
         return Constants.stopoverList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InnerCurrentItineraryCollectionViewCell", for: indexPath) as? InnerCurrentItineraryCollectionViewCell else {
             return UICollectionViewCell()
-
         }
         cell.rowIndex = self.rowIndex!
         cell.card.frame.size = CGSize(width: cell.card.frame.width, height: self._contentHeight)
@@ -88,6 +90,36 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
         prepareButtons(for: cell)
 
         let columnIndex = indexPath.row
+
+        guard self.rowIndex! > 0 else {
+            cell.modelIndex = 100
+            cell.card._delegate = cell
+            cell.backgroundImageView.image = UIImage(named: Constants.arrivalStopover.wallImageName!)
+            let stopover = Constants.arrivalStopover
+            cell.itineraryTitle.text = Constants.arrivalStopover.name
+            cell.ratingLabel.text = String(describing: "\(Constants.arrivalStopover.rating!) ☆")
+            if let busColor = stopover.busColor {
+                cell.busLabel.text = "\(busColor.capitalized) Bus line"
+                cell.busLabel.textColor = busColor.toColor()
+            }
+            if let wirelessInfo = stopover.wirelessInfo {
+                cell.wifiLabel.text = "\(wirelessInfo.capitalized)"
+            } else {
+                cell.wifiLabel.text = "No public Wifi available"
+            }
+            if let openingHours = stopover.openingHours {
+                cell.openingHoursLabel.text = "Open: \(openingHours)"
+            } else {
+                cell.openingHoursLabel.text = ""
+            }
+
+            cell.directionsButton.isHidden = true
+            cell.ticketsButton.isHidden = true
+            cell.directionsButton.isEnabled = false
+            cell.ticketsButton.isEnabled = false
+            return cell
+        }
+
         cell.modelIndex = (columnIndex + self.rowIndex!) % Constants.stopoverList.count
         cell.card._delegate = cell
         cell.backgroundImageView.image = UIImage(named: Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].wallImageName!)

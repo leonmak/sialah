@@ -67,8 +67,7 @@ class ItineraryViewController: UIViewController {
     }
 
     @objc private func handleInfoCardPressed(_ notification: Notification) {
-        let modelIndex = notification.userInfo!["modelIndex"] as! Int
-        self.performSegue(withIdentifier: "infoCardSegue", sender: modelIndex)
+        self.performSegue(withIdentifier: "infoCardSegue", sender: notification.userInfo)
     }
 
     @objc private func handleTicketButtonPressed(_ notification: Notification) {
@@ -103,7 +102,14 @@ class ItineraryViewController: UIViewController {
         switch segue.identifier! {
         case "infoCardSegue":
             let destVC = segue.destination as! InfoVC
-            destVC.stopover = Constants.stopoverList[sender as! Int]
+            let userInfo = sender as! [AnyHashable : Any]
+            let modelIndex = userInfo["modelIndex"] as! Int
+            let rowIndex = userInfo["rowIndex"] as! Int
+            guard rowIndex > 0 else {
+                destVC.stopover = Constants.arrivalStopover
+                return
+            }
+            destVC.stopover = Constants.stopoverList[modelIndex]
         case "ticketButtonSegue":
             let destVC = segue.destination as! CouponVC
             destVC.stopover = Constants.stopoverList[sender as! Int]

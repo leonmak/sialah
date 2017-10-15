@@ -17,6 +17,14 @@ struct Constants {
                                  "food-2b",
                                  "food-2c",
                                  "food-3"]
+
+    static let arrivalStopover = Stopover(
+        name: "Arrival", description: "A 5-minute walk from Orchard MRT Station, Grand Hyatt Singapore offers luxurious accommodation, an elegant outdoor pool and 6 dining options including the award-winning restaurant mezza9. There is also a spa.",
+        panoImageName: "airport-pano", wallImageName: "airport",
+        wirelessInfo: "Free Changi Airport Wifi", busColor: "blue",
+        events: ["Free shuttle bus to selected hotels."],
+        url: URL(string: "http://www.changiairport.com/"),
+        rating: 4.6)
     
     static let zooStopover =
         Stopover(name: "Singapore Zoo", description: """
