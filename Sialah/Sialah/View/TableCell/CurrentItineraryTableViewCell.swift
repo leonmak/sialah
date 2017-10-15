@@ -18,7 +18,6 @@ class CurrentItineraryTableViewCell: UITableViewCell {
     var contentHeight: CGFloat = 222 {
         didSet {
             UIView.animate(withDuration: 1.0) {
-                print(self.contentHeight)
                 self._contentHeight = self.contentHeight
                 self.innerItineraryCollectionView.reloadData()
             }

@@ -43,7 +43,7 @@ class ItineraryViewController: UIViewController {
             distance: 10
         )
         circleExpandingMenu.delegate = self
-        circleExpandingMenu.backgroundColor = .green
+        circleExpandingMenu.backgroundColor = UIColor(red:0.19, green:0.57, blue:1, alpha:1)
         circleExpandingMenu.layer.cornerRadius = circleExpandingMenu.frame.size.width / 2
 
         self.view.addSubview(circleExpandingMenu)
