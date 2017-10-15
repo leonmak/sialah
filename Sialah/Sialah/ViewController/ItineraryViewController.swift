@@ -37,7 +37,7 @@ class ItineraryViewController: UIViewController {
         let circleExpandingMenu = CircleExpandingMenu(
             frame: CGRect(x: self.view.bounds.width - 100, y: self.view.bounds.height - 100, width: 50, height: 50),
             normalIcon: "icons_menu",
-            selectedIcon: "icon-close",
+            selectedIcon: "icons_close",
             buttonsCount: 2,
             duration: 0.8,
             distance: 10
