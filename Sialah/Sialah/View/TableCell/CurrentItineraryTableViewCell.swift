@@ -12,34 +12,17 @@ import DynamicButton
 class CurrentItineraryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var innerItineraryCollectionView: UICollectionView!
-    @IBOutlet weak var directionsButton: DynamicButton!
-    @IBOutlet weak var ticketsButton: DynamicButton!
-    @IBOutlet weak var moreButton: DynamicButton!
 
     private var startingScrollingOffset = CGPoint.zero
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupDelegates()
-        prepareButtons()
     }
 
     private func setupDelegates() {
         innerItineraryCollectionView.delegate = self
         innerItineraryCollectionView.dataSource = self
-    }
-
-    private func prepareButtons() {
-        prepare(button: directionsButton)
-        prepare(button: ticketsButton)
-        prepare(button: moreButton)
-    }
-
-    private func prepare(button: DynamicButton) {
-        button.layer.cornerRadius = button.frame.height / 2.0
-        button.contentMode = .center
-        button.imageView?.contentMode = .center
-        button.imageView?.contentScaleFactor = 1.5
     }
 
 }
@@ -86,8 +69,25 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InnerCurrentItineraryCollectionViewCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InnerCurrentItineraryCollectionViewCell", for: indexPath) as? InnerCurrentItineraryCollectionViewCell else {
+            return UICollectionViewCell()
+
+        }
+        prepareButtons(for: cell)
         return cell
+    }
+
+    private func prepareButtons(for cell: InnerCurrentItineraryCollectionViewCell) {
+        prepare(button: cell.directionsButton)
+        prepare(button: cell.ticketsButton)
+        prepare(button: cell.moreButton)
+    }
+
+    private func prepare(button: DynamicButton) {
+        button.layer.cornerRadius = button.frame.height / 2.0
+        button.contentMode = .center
+        button.imageView?.contentMode = .center
+        button.imageView?.contentScaleFactor = 1.5
     }
 
 }

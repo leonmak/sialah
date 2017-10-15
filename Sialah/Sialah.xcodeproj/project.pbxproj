@@ -25,6 +25,7 @@
 		F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */; };
 		F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */; };
 		F1044C651F931F0200AA70BB /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1044C641F931F0200AA70BB /* PassThroughView.swift */; };
+		F1D53C781F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D53C771F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift */; };
 		F72CE51DC787F493433C5B8C /* Pods_Sialah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83990CFD1505E08F4C653F43 /* Pods_Sialah.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentItineraryTableViewCell.swift; sourceTree = "<group>"; };
 		F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherItineraryTableViewCell.swift; sourceTree = "<group>"; };
 		F1044C641F931F0200AA70BB /* PassThroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
+		F1D53C771F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCurrentItineraryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		77361E1C1F92EA6B008D94C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F1D53C761F933CBB004DC156 /* CollectionViewCell */,
 				77361E5C1F92EC23008D94C0 /* Cards */,
 				77361E1E1F92EA9A008D94C0 /* TableCell */,
 				77361E1A1F92EA60008D94C0 /* ColoredBtn.swift */,
@@ -157,6 +160,14 @@
 				83990CFD1505E08F4C653F43 /* Pods_Sialah.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1D53C761F933CBB004DC156 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F1D53C771F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 				77361E5A1F92EC1E008D94C0 /* CardHighlight.swift in Sources */,
 				F1044C651F931F0200AA70BB /* PassThroughView.swift in Sources */,
 				77361E591F92EC1E008D94C0 /* CardGroupSliding.swift in Sources */,
+				F1D53C781F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift in Sources */,
 				77361E551F92EC1E008D94C0 /* CardGroup.swift in Sources */,
 				77361E1B1F92EA61008D94C0 /* ColoredBtn.swift in Sources */,
 				F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */,
