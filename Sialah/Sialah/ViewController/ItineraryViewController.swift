@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItineraryViewController: UIViewController {
+class ItineraryViewController: UIViewController, CardDelegate {
 
     struct MenuButton {
         let image: UIImage
@@ -46,9 +46,15 @@ class ItineraryViewController: UIViewController {
         departCardGroup.textColor = UIColor.white
         departCardGroup.category = "Flight SQ342 - SIN-DPS"
         departCardGroup.backgroundImage = UIImage(named: "airport")
+        departCardGroup.delegate = self
         view.addSubview(departCardGroup)
     }
 
+    func cardDidTapInside(card: Card) {
+        if let article = card as? CardArticle, article.title == "Departure" {
+            performSegue(withIdentifier: "CouponVC", sender: nil)
+        }
+    }
 
     private func setupNotificationHandlers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleDoneButtonPressed(_:)), name: Notification.Name(rawValue: "doneButtonPressed"), object: nil)
@@ -65,7 +71,10 @@ class ItineraryViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0.2)) {
             self.itineraryTableView.scrollToRow(at: IndexPath(row: self.currentIndex, section: 0), at: .top, animated: true)
             if self.currentIndex == 3 {
-                self.alert(message: "A venue for your upcoming event is ending.", title: "Venue early closure")
+                self.alert(message: "Early closure due to weekly cleaning of enclosures.", title: "Singapore Zoo early closure")
+            }
+            if self.currentIndex == 4 {
+                self.alert(message: "Checkout is at 8am tomrrow. Please be punctual", title: "Flight reminders")
             }
         }
     }
@@ -131,6 +140,12 @@ class ItineraryViewController: UIViewController {
             destVC.stopover = Constants.stopoverList[sender as! Int]
         case "segueToChecklist":
             return
+        case "CouponVC":
+            if let destVC = segue.destination as? CouponVC {
+                destVC.stopover = Constants.departureStopover
+            }
+        case "FoodVC":
+            return
         default:
             return
         }
@@ -146,7 +161,9 @@ extension ItineraryViewController: CircleExpandingMenuDelegate {
     }
 
     func circleExpandingMenu(_ circleExpandingMenu: CircleExpandingMenu, buttonDidSelected button: UIButton, atIndex: Int) {
-        performSegue(withIdentifier: "FoodVC", sender: nil)
+        if atIndex == 0 {
+            performSegue(withIdentifier: "FoodVC", sender: nil)
+        }
         return
     }
 

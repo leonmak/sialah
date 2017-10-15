@@ -61,12 +61,6 @@ struct Constants {
                  categories: [Category.adventure, Category.arts],
                  events: ["25% Discounts on tickets for the holodome."],
                  url: URL(string: "http://www.gardensbythebay.com.sg/"), rating: 4.7),
-        Stopover(name: "Chinatown", description: "Singapore’s historic Chinatown is a bustling mix of old and new, filled with traditional shops and markets as well as cool stores and cafes.",
-                 wallImageName: "chinatown",
-                 busColor: "blue",
-                 categories: [Category.foodie],
-                 events: ["25% Discounts on 'char kway teow' (stir-fried noodles) and 'satay' (barbecued meat skewers) at Chinatown Food Street"],
-                 url: URL(string: "http://www.visitsingapore.com/see-do-singapore/places-to-see/chinatown.html"), rating: 4.3),
         Constants.zooStopover,
         Stopover(name: "Botanical Gardens", description: "The Singapore Botanic Gardens is a 158-year-old tropical garden located at the fringe of Singapore's Orchard Roadshopping district.",
                  openingHours: "5am - 12am daily",
@@ -74,8 +68,23 @@ struct Constants {
                  busColor: "brown", categories: [Category.adventure],
                  events: ["Special discount for tours."],
                  url: URL(string: "https://www.sbg.org.sg/"), rating: 4.6),
+        Stopover(name: "Chinatown", description: "Singapore’s historic Chinatown is a bustling mix of old and new, filled with traditional shops and markets as well as cool stores and cafes.",
+                 wallImageName: "chinatown",
+                 busColor: "blue",
+                 categories: [Category.foodie],
+                 events: ["25% Discounts on 'char kway teow' (stir-fried noodles) and 'satay' (barbecued meat skewers) at Chinatown Food Street"],
+                 url: URL(string: "http://www.visitsingapore.com/see-do-singapore/places-to-see/chinatown.html"), rating: 4.3),
     ]
     
+    static let departureStopover = Stopover(name: "Departure Info",
+                                            description: "Flight SQ 134",
+                                            panoImageName: "airport-ticket", wallImageName: "airport-ticket", ticketImageName: "aiport-ticket")
+    static let fruitNames = ["fruit-1.jpg",
+                             "fruit-2.jpg",
+                             "fruit-3.jpg",
+                             "fruit-4.jpg",
+                             "fruit-5.jpg",
+                             "fruit-6.jpg"]
     static let mockResponse: [String: Any] = [
         "flightIDs": [
             "2301D9F90000ABE4"

@@ -263,6 +263,8 @@
                         <segue destination="s1u-6j-An9" kind="show" identifier="infoCardSegue" id="EDU-TM-hBn"/>
                         <segue destination="nUx-vp-rDw" kind="show" identifier="ticketButtonSegue" id="hiT-3E-RBL"/>
                         <segue destination="EZH-7X-PZJ" kind="show" identifier="segueToChecklist" id="Dzd-94-aEL"/>
+                        <segue destination="wOn-fJ-hGn" kind="show" identifier="FoodVC" id="krL-Jv-zvA"/>
+                        <segue destination="nUx-vp-rDw" kind="show" identifier="CouponVC" id="MXQ-Xj-UEt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -337,6 +339,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNJ-WH-3AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1735" y="-3"/>
+        </scene>
+        <!--FoodVC-->
+        <scene sceneID="hSD-mF-H9Z">
+            <objects>
+                <viewController id="wOn-fJ-hGn" customClass="FoodVC" customModule="Sialah" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7U-nC-s20">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMx-F8-U6t">
+                                <rect key="frame" x="16" y="96" width="343" height="571"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delicious food near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGl-SQ-hjm">
+                                <rect key="frame" x="15" y="40" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4A9-21-CE1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yGl-SQ-hjm" firstAttribute="leading" secondItem="mPz-Vh-KKo" secondAttribute="leading" constant="15" id="AvJ-nP-rNt"/>
+                            <constraint firstItem="BMx-F8-U6t" firstAttribute="top" secondItem="yGl-SQ-hjm" secondAttribute="bottom" constant="26" id="Df2-rb-E2b"/>
+                            <constraint firstItem="mPz-Vh-KKo" firstAttribute="trailing" secondItem="yGl-SQ-hjm" secondAttribute="trailing" constant="15" id="Fn7-ds-F8H"/>
+                            <constraint firstItem="yGl-SQ-hjm" firstAttribute="top" secondItem="mPz-Vh-KKo" secondAttribute="top" constant="20" id="GF6-pF-hac"/>
+                            <constraint firstItem="BMx-F8-U6t" firstAttribute="leading" secondItem="mPz-Vh-KKo" secondAttribute="leading" constant="16" id="Nps-d0-Imu"/>
+                            <constraint firstItem="BMx-F8-U6t" firstAttribute="bottom" secondItem="mPz-Vh-KKo" secondAttribute="bottom" id="Vlq-ru-TOt"/>
+                            <constraint firstItem="mPz-Vh-KKo" firstAttribute="trailing" secondItem="BMx-F8-U6t" secondAttribute="trailing" constant="16" id="XYt-if-Kv3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mPz-Vh-KKo"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="yGl-SQ-hjm" id="8VR-On-Rgr"/>
+                        <outlet property="scrollView" destination="BMx-F8-U6t" id="7ZX-4q-n7X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qbq-7i-TXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541.60000000000002" y="856.82158920539734"/>
         </scene>
         <!--CouponVC-->
         <scene sceneID="iFG-7h-bBP">

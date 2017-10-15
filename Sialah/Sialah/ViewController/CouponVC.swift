@@ -38,6 +38,11 @@ class CouponVC: UIViewController, CardDelegate {
         }
         couponCard.icon = UIImage(named: stopover.qrcodeName!)
         
+        if stopover.name == "Departure Info" {
+            couponCard.itemTitle = "Gate 42 - Flight SQ 134"
+            couponCard.itemSubtitle = "Boarding in 30 min"
+            couponCard.buttonText = "Customer service"
+        }
         self.view.addSubview(couponCard)
     }
     

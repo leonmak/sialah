@@ -31,7 +31,7 @@ class FoodVC: UIViewController {
         card.icons = Constants.iconImageNames.map { UIImage(named: $0)! }
         card.iconsSize = 60
         card.iconsRadius = 30
-        card.title = "Special Offers"
+        card.title = "Local Food Discounts"
         card.subtitle = "Near Gardens By the bay"
         scrollView.addSubview(card)
         return card
@@ -41,10 +41,10 @@ class FoodVC: UIViewController {
         let titlePosition = CGRect(x: X(insets), y: Y(1, from: card!), width: X(85) , height: 300)
         let card = CardGroupSliding(frame: titlePosition)
         card.textColor = UIColor.black
-        card.icons = Constants.iconImageNames.map { UIImage(named: $0)! }
+        card.icons = Constants.fruitNames.map { UIImage(named: $0)! }
         card.iconsSize = 60
         card.iconsRadius = 30
-        card.title = "Special Offers"
+        card.title = "Fruit Season Offers"
         card.subtitle = "Near Orchard Road"
         scrollView.addSubview(card)
         return card

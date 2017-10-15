@@ -1,0 +1,6 @@
+"fruit-1.jpg",
+"fruit-2.jpg",
+"fruit-3.jpg",
+"fruit-4.jpg",
+"fruit-5.jpg",
+"fruit-6.jpg",
