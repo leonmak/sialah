@@ -222,6 +222,7 @@
                     </view>
                     <connections>
                         <outlet property="itineraryTableView" destination="iVp-Fg-amL" id="kkV-QP-PAI"/>
+                        <segue destination="s1u-6j-An9" kind="show" identifier="infoCardSegue" id="EDU-TM-hBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
