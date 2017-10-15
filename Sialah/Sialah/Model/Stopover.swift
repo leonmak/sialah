@@ -43,7 +43,7 @@ class Stopover {
         self.panoImageName = panoImageName
         self.wallImageName = wallImageName
         self.ticketImageName = ticketImageName
-        self.qrcodeName = qrcodeName
+        self.qrcodeName = "qrcode"
         self.busColor = busColor
         self.wirelessInfo = wirelessInfo
         self.categories = categories
