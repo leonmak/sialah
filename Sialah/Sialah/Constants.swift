@@ -68,4 +68,20 @@ struct Constants {
         Constants.defaultInfoStopover,
         Constants.zooStopover
     ]
+    
+    static let mockResponse: [String: Any] = [
+        "flightIDs": [
+            "2301D9F90000ABE4"
+        ],
+        "originAirport": [
+            "airportCode": "SIN",
+            "airportTerminal": "3"
+        ],
+        "destinationAirport": [
+            "airportCode": "FCO",
+            "airportTerminal": "3"
+        ],
+        "flightNumber": "366",
+        "departureDateTime": "2017-11-01T01:55:00"
+    ]
 }

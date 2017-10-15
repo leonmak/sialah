@@ -17,6 +17,7 @@ class InfoVC: UIViewController, CardDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var panoView: CTPanoramaView!
     
+    var stopoverLabel = UILabel()
     var stopover = Constants.defaultInfoStopover
     
     override func viewDidLoad() {
@@ -31,8 +32,17 @@ class InfoVC: UIViewController, CardDelegate {
                                   width: view.frame.width - insets * 2,
                                   height: view.frame.height - insets * 2)
         initScrollViewCards()
+        initBackBtn()
     }
 
+    func initBackBtn() {
+        let backBtnFrame = CGRect(x: X(75), y: Y(insets), width: X(21), height: 30.0)
+        let backBtn = ColoredBtn(frame: backBtnFrame, title: "Back", color: UIColor.flatGrayDark)
+        backBtn.layer.shadowOpacity = 0
+        backBtn.addTarget(self, action: #selector(self.backPressed(_:)), for: .touchUpInside)
+        self.view.addSubview(backBtn)
+    }
+    
     func initScrollViewCards() {
         let name = initStopoverName()
         let couponCard = initCoupon(name)
@@ -44,7 +54,7 @@ class InfoVC: UIViewController, CardDelegate {
     }
     
     func initStopoverName() -> UILabel {
-        let stopoverLabel = UILabel(frame: CGRect(x: X(insets), y: Y(insets), width: X(100-insets*2), height: 40))
+        self.stopoverLabel = UILabel(frame: CGRect(x: X(insets), y: Y(insets), width: X(100-insets*2), height: 40))
         stopoverLabel.text = stopover.name.uppercased()
         stopoverLabel.textColor = UIColor.flatBlack
         stopoverLabel.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
@@ -79,7 +89,7 @@ class InfoVC: UIViewController, CardDelegate {
     func initTitle(miniCouponCard: Card?) -> Card {
         let titlePosition = miniCouponCard != nil
             ? CGRect(x: X(insets), y: Y(10, from: miniCouponCard!), width: X(100 - insets*2) , height: 300)
-            : CGRect(x: X(insets), y: Y(0), width: X(90) , height: 300)
+            : CGRect(x: X(insets), y: Y(10, from: stopoverLabel), width: X(90) , height: 300)
 
         let card = CardHighlight(frame: titlePosition)
         card.title = "\(stopover.name) tours"
@@ -166,6 +176,11 @@ class InfoVC: UIViewController, CardDelegate {
             }
         }
     }
+    
+    @objc func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .all

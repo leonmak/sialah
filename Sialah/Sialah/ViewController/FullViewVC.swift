@@ -50,8 +50,8 @@ class FullViewVC: UIViewController {
         setDragBtnTitle()
         self.view.addSubview(dragMotionBtn)
         
-        let backBtnFrame = CGRect(x: rect.width * 0.1, y: rect.height * 0.1, width: rect.width * 0.3, height: rect.height * 0.1)
-        let backBtn = ColoredBtn(frame: backBtnFrame, title: "Back", color: UIColor.clear)
+        let backBtnFrame = CGRect(x: rect.width * 0.1, y: 0, width: rect.width * 0.3, height: rect.height * 0.1)
+        let backBtn = ColoredBtn(frame: backBtnFrame, title: "Back", color: UIColor.flatGrayDark)
         backBtn.addTarget(self, action: #selector(self.backPressed(_:)), for: .touchUpInside)
         self.view.addSubview(backBtn)
     }
@@ -59,6 +59,7 @@ class FullViewVC: UIViewController {
     @objc func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
     @objc func dragMotionBtnPressed(_ sender: Any) {
         isMotion = !isMotion
         panoView.controlMethod = isMotion ? .motion : .touch
