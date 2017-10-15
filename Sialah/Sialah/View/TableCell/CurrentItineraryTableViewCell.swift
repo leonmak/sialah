@@ -14,6 +14,8 @@ class CurrentItineraryTableViewCell: UITableViewCell {
     @IBOutlet weak var innerItineraryCollectionView: UICollectionView!
     @IBOutlet weak var directionsButton: DynamicButton!
 
+    private var startingScrollingOffset = CGPoint.zero
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,6 +35,40 @@ class CurrentItineraryTableViewCell: UITableViewCell {
     }
 
 
+}
+
+// - MARK: UICollectionViewDelegate
+extension CurrentItineraryTableViewCell: UICollectionViewDelegate {
+
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startingScrollingOffset = scrollView.contentOffset
+    }
+
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let cellWidth = collectionView(
+            innerItineraryCollectionView,
+            layout: innerItineraryCollectionView.collectionViewLayout,
+            sizeForItemAt: IndexPath(item: 0, section: 0)
+        ).width
+
+        let page: CGFloat
+        let offset = scrollView.contentOffset.x + scrollView.contentInset.left
+        let proposedPage = offset / max(1, cellWidth)
+        let snapPoint: CGFloat = 0.1
+        let snapDelta: CGFloat = offset > startingScrollingOffset.x ? (1 - snapPoint) : snapPoint
+
+        if floor(proposedPage + snapDelta) == floor(proposedPage) {
+            page = floor(proposedPage)
+        }
+        else {
+            page = floor(proposedPage + 1)
+        }
+
+        targetContentOffset.pointee = CGPoint(
+            x: cellWidth * page,
+            y: targetContentOffset.pointee.y
+        )
+    }
 }
 
 // - MARK: UICollectionViewDataSource
