@@ -15,7 +15,7 @@ class Stopover {
     var wallImageName: String?
     var panoImageName: String?
     var ticketImageName: String?
-    var qrcodeName: String?="qrcode"
+    var qrcodeName: String?
     var wirelessInfo: String?
     var categories: [Category] = []
     var events: [String] = []

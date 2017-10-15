@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CouponVC: UIViewController {
+class CouponVC: UIViewController, CardDelegate {
 
     var couponCard: CouponCard!
     var stopover: Stopover = Constants.zooStopover
@@ -17,7 +17,7 @@ class CouponVC: UIViewController {
         super.viewDidLoad()
         
         initCoupon()
-        
+        couponCard.delegate = self
     }
     
     func initCoupon() {
@@ -41,6 +41,9 @@ class CouponVC: UIViewController {
         self.view.addSubview(couponCard)
     }
     
+    func cardCouponDidTapButton(card: CouponCard, button: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

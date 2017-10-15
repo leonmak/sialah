@@ -141,6 +141,7 @@ import ImageIO
         yFov = 70
         
         sceneView.scene = scene
+        sceneView.layer.cornerRadius = 30
         sceneView.backgroundColor = UIColor.black
         
         switchControlMethod(to: controlMethod)

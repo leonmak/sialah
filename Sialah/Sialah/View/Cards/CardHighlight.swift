@@ -80,14 +80,14 @@ class CardHighlight: Card {
         iconIV.layer.cornerRadius = iconRadius
         iconIV.clipsToBounds = true
         
-        titleLbl.frame = CGRect(x: X(insets), y: Y(5, from: iconIV), width: X(60), height: Y(35))
+        titleLbl.frame = CGRect(x: X(insets), y: Y(5, from: iconIV), width: X(80), height: Y(35))
         titleLbl.text = title.uppercased()
         titleLbl.textColor = textColor
-        titleLbl.font = UIFont.systemFont(ofSize: 72, weight: .heavy)
+        titleLbl.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
         titleLbl.adjustsFontSizeToFitWidth = true
         titleLbl.setLineHeight(0.65)
         titleLbl.minimumScaleFactor = 0.1
-        titleLbl.lineBreakMode = .byTruncatingTail
+        titleLbl.lineBreakMode = .byWordWrapping
         titleLbl.numberOfLines = 3
         
         itemTitleLbl.frame = CGRect(x: X(insets), y: RevY(17, height: Y(8)) + X(insets), width: X(80) - btnWidth, height: Y(8))

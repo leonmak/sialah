@@ -9,22 +9,30 @@
 import UIKit
 
 struct Constants {
-    static let iconImageNames = ["coffee", "corn", "corndog", "cucumber", "cupcake", "doughnut-1", "doughnut",
-                                 "eggplant", "fish-and-chips", "fish", "juice-6", "juice-7", "pia-colada", "pineapple",
-                                 "popsicle-1", "popsicle"]
+    static let iconImageNames = ["food-1",
+                                 "food-1a",
+                                 "food-1b",
+                                 "food-2",
+                                 "food-2a",
+                                 "food-2b",
+                                 "food-2c",
+                                 "food-3"]
     
     static let zooStopover =
         Stopover(name: "Singapore Zoo", description: """
                 Nine-time winner of the coveted Best Leisure Attraction Experience award by the Singapore Tourism Board, our 26-hectare wildlife park is nestled within the lush Mandai rainforest that stretches into the magnificent Upper Seletar Reservoir. More than 2,800 animals representing over 300 species of mammals, birds and reptiles call Singapore Zoo home.
                 """,
-                 panoImageName: "zoo-pano",
                  wallImageName: "zoo",
-                 ticketImageName: "zoo-ticket")
+                 ticketImageName: "zoo-ticket",
+                 qrcodeName: "qrcode")
 
     static let defaultInfoStopover =
-        Stopover(name: "Merlion Park", description: "Explore the island's amamzing view newar the iconic Merlion.",
+        Stopover(name: "Merlion Park",
+                 description: "Explore the island's amamzing view newar the iconic Merlion.",
                  panoImageName: "merlion-pano",
-                 wallImageName: "merlion")
+                 wallImageName: "merlion",
+                 qrcodeName: "qrcode",
+                 events: ["50% Discounts on all hawker center food and drinks"])
 
     static let stopoverList = [
         Stopover(name: "Changi Airport", description: """
@@ -36,7 +44,8 @@ struct Constants {
                  categories: [Category.airport], url: URL(string: "http://www.changiairport.com")),
         Stopover(name: "Hyatt Hoten", description:"""
                 A 5-minute walk from Orchard MRT Station, Grand Hyatt Singapore offers luxurious accommodation, an elegant outdoor pool and 6 dining options including the award-winning restaurant mezza9. There is also a spa.
-                """),
+                """,
+                 panoImageName: "hotel-pano", wallImageName: "hotel"),
         Stopover(name: "Gardens By the Bay", description:"""
                 Gardens by the Bay is a nature park spanning 101 hectares (250 acres) of reclaimed land in central Singapore, adjacent to the Marina Reservoir. The park consists of three waterfront gardens: Bay South Garden, Bay East Garden and Bay Central Garden. The largest of the gardens is Bay South Garden at 54 hectares (130 acres).
                 """,

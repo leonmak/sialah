@@ -12,18 +12,18 @@ import CTPanoramaView
 class FullViewVC: UIViewController {
     
     @IBOutlet weak var panoView: CTPanoramaView!
-    var panoImageName: String? {
-        didSet {
-            panoView.image = UIImage(named: panoImageName!)!
-        }
-    }
+    var stopover: Stopover = Constants.zooStopover
     
-    var dragBtn: ColoredBtn!
-    var motionBtn: ColoredBtn!
+    var dragMotionBtn: ColoredBtn!
+    
+    var isMotion = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         initPanoView()
         initButtons()
     }
@@ -31,28 +31,38 @@ class FullViewVC: UIViewController {
     func initPanoView() {
         panoView.controlMethod = .motion
         panoView.panoramaType = .cylindrical
-        panoImageName = panoImageName == nil ? "merlion" : panoImageName
+        panoView.image = UIImage(named: stopover.panoImageName!)
+    }
+    
+    func setDragBtnTitle() {
+        if isMotion {
+            dragMotionBtn.setTitle("Motion", for: .normal)
+        } else {
+            dragMotionBtn.setTitle("Drag", for: .normal)
+        }
     }
     
     func initButtons() {
-        let w = view.frame.width
-        let h = view.frame.height
-        let dragFrameBtn = CGRect(x: w * 0.1, y: h * 0.8, width: w * 0.3, height: h * 0.075)
-        let motionBtnFrame = CGRect(x: w * 0.6, y: h * 0.8, width: w * 0.3, height: h * 0.075)
-        self.dragBtn = ColoredBtn(frame: dragFrameBtn, title: "Drag", color: UIColor.darkGray.withAlphaComponent(0.75))
-        self.motionBtn = ColoredBtn(frame: motionBtnFrame, title: "Motion", color: UIColor.darkGray.withAlphaComponent(0.75))
-        self.dragBtn.addTarget(self, action: #selector(self.dragBtnPressed(_:)), for: .touchUpInside)
-        self.motionBtn.addTarget(self, action: #selector(self.motionBtnPressed(_:)), for: .touchUpInside)
-        self.view.addSubview(dragBtn)
-        self.view.addSubview(motionBtn)
+        let dragFrame = CGRect(x: rect.width * 0.6, y: rect.height * 0.85, width: rect.width * 0.3, height: rect.height * 0.1)
+        self.dragMotionBtn = ColoredBtn(frame: dragFrame, title: "",
+                                        color: UIColor.darkGray.withAlphaComponent(0.75))
+        self.dragMotionBtn.addTarget(self, action: #selector(self.dragMotionBtnPressed(_:)), for: .touchUpInside)
+        setDragBtnTitle()
+        self.view.addSubview(dragMotionBtn)
+        
+        let backBtnFrame = CGRect(x: 0, y: rect.height * 1, width: rect.width * 0.3, height: rect.height * 0.1)
+        let backBtn = ColoredBtn(frame: backBtnFrame, title: "Back", color: UIColor.clear)
+        backBtn.addTarget(self, action: #selector(self.backPressed(_:)), for: .touchUpInside)
+        self.view.addSubview(backBtn)
     }
 
-    @objc func dragBtnPressed(_ sender: Any) {
-        panoView.controlMethod = .touch
+    @objc func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    
-    @objc func motionBtnPressed(_ sender: Any) {
-        panoView.controlMethod = .motion
+    @objc func dragMotionBtnPressed(_ sender: Any) {
+        isMotion = !isMotion
+        panoView.controlMethod = isMotion ? .motion : .touch
+        setDragBtnTitle()
     }
     
     override func didReceiveMemoryWarning() {
