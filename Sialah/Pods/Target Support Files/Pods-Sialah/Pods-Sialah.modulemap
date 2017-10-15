@@ -1,0 +1,6 @@
+framework module Pods_Sialah {
+  umbrella header "Pods-Sialah-umbrella.h"
+
+  export *
+  module * { export * }
+}
