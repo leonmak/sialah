@@ -50,9 +50,11 @@ class FullViewVC: UIViewController {
         setDragBtnTitle()
         self.view.addSubview(dragMotionBtn)
         
-        let backBtnFrame = CGRect(x: rect.width * 0.1, y: 0, width: rect.width * 0.3, height: rect.height * 0.1)
+        let backBtnFrame = CGRect(x: X(75), y: Y(6), width: X(21), height: 30.0)
         let backBtn = ColoredBtn(frame: backBtnFrame, title: "Back", color: UIColor.flatGrayDark)
+        backBtn.layer.shadowOpacity = 0
         backBtn.addTarget(self, action: #selector(self.backPressed(_:)), for: .touchUpInside)
+        
         self.view.addSubview(backBtn)
     }
 

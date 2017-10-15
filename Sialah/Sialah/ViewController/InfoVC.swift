@@ -54,7 +54,7 @@ class InfoVC: UIViewController, CardDelegate {
     }
     
     func initStopoverName() -> UILabel {
-        self.stopoverLabel = UILabel(frame: CGRect(x: X(insets), y: Y(insets), width: X(100-insets*2), height: 40))
+        self.stopoverLabel = UILabel(frame: CGRect(x: X(insets), y: Y(insets), width: X(100-insets*2), height: 30))
         stopoverLabel.text = stopover.name.uppercased()
         stopoverLabel.textColor = UIColor.flatBlack
         stopoverLabel.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
@@ -157,8 +157,15 @@ class InfoVC: UIViewController, CardDelegate {
     
     // MARK: Button pressed
     func cardHighlightDidTapButton(card: CardHighlight, button: UIButton) {
-        if button.titleLabel?.text! == "ENLARGE" {
+        print(button.titleLabel!.text!)
+        switch button.titleLabel!.text! {
+        case "ENLARGE":
             performSegue(withIdentifier: "CouponVC", sender: stopover)
+        case "MORE INFO":
+            if let url = stopover.url {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        default: break
         }
     }
     
