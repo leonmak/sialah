@@ -15,6 +15,18 @@ class CurrentItineraryTableViewCell: UITableViewCell {
 
     private var startingScrollingOffset = CGPoint.zero
 
+    var contentHeight: CGFloat = 222 {
+        didSet {
+            UIView.animate(withDuration: 1.0) {
+                print(self.contentHeight)
+                self._contentHeight = self.contentHeight
+                self.innerItineraryCollectionView.reloadData()
+            }
+        }
+    }
+
+    var _contentHeight: CGFloat = 222
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupDelegates()
@@ -69,6 +81,9 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
             return UICollectionViewCell()
 
         }
+        cell.card.frame.size = CGSize(width: cell.card.frame.width, height: self._contentHeight)
+        cell.overlayView.frame.size = CGSize(width: cell.overlayView.frame.width, height: self._contentHeight)
+        cell.backgroundImageView.frame.size = CGSize(width: cell.backgroundImageView.frame.width, height: self._contentHeight)
         prepareButtons(for: cell)
         return cell
     }

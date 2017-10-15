@@ -39,7 +39,7 @@ extension ItineraryViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             return 280
         }
-        return 140
+        return 180
     }
 }
 
@@ -57,9 +57,12 @@ extension ItineraryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentItineraryTableViewCell", for: indexPath) as! CurrentItineraryTableViewCell
+            cell.contentHeight = 222
             return cell
         }
 
-        return tableView.dequeueReusableCell(withIdentifier: "OtherItineraryTableViewCell", for: indexPath) as! OtherItineraryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentItineraryTableViewCell", for: indexPath) as! CurrentItineraryTableViewCell
+        cell.contentHeight = 140
+        return cell
     }
 }

@@ -11,6 +11,8 @@ import DynamicButton
 
 class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var card: Card!
+    @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var itineraryTitle: UILabel!
     @IBOutlet weak var directionsButton: DynamicButton!
