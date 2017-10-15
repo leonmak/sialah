@@ -35,11 +35,7 @@ extension CurrentItineraryTableViewCell: UICollectionViewDelegate {
     }
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let cellWidth = collectionView(
-            innerItineraryCollectionView,
-            layout: innerItineraryCollectionView.collectionViewLayout,
-            sizeForItemAt: IndexPath(item: 0, section: 0)
-        ).width
+        let cellWidth = UIScreen.main.bounds.width + 22
 
         let page: CGFloat
         let offset = scrollView.contentOffset.x + scrollView.contentInset.left
