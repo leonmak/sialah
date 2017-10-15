@@ -29,33 +29,46 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-EM-bMU">
-                                                    <rect key="frame" x="8" y="8" width="359" height="263.5"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-EM-bMU">
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="263.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xIt-0z-VJV">
-                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="itemSize" width="378" height="262"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InnerCurrentItineraryCollectionViewCell" id="qDC-N0-lEY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="1" width="378" height="262"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="378" height="262"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dB5-vB-rmW" customClass="Card" customModule="Sialah" customModuleProvider="target">
+                                                                        <rect key="frame" x="20" y="20" width="338" height="222"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <subviews>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barbecue-1" translatesAutoresizingMaskIntoConstraints="NO" id="It4-rn-Und">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="338" height="222"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </view>
+                                                                </subviews>
                                                             </view>
-                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="bQL-EM-bMU" secondAttribute="trailing" id="9QZ-zg-E9J"/>
+                                                <constraint firstItem="bQL-EM-bMU" firstAttribute="leading" secondItem="lzf-Uz-i7z" secondAttribute="leading" id="3UC-e5-iPg"/>
                                                 <constraint firstItem="bQL-EM-bMU" firstAttribute="top" secondItem="lzf-Uz-i7z" secondAttribute="topMargin" id="DSs-ee-fDz"/>
+                                                <constraint firstAttribute="trailing" secondItem="bQL-EM-bMU" secondAttribute="trailing" id="Ubc-1t-8Iw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bQL-EM-bMU" secondAttribute="bottom" id="d0Z-wP-eFv"/>
-                                                <constraint firstItem="bQL-EM-bMU" firstAttribute="leading" secondItem="lzf-Uz-i7z" secondAttribute="leadingMargin" id="mvk-I7-kxp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -145,4 +158,7 @@
             <point key="canvasLocation" x="2222" y="-188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="barbecue-1" width="128" height="87"/>
+    </resources>
 </document>

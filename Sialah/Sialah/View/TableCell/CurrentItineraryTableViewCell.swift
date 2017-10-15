@@ -37,8 +37,6 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InnerCurrentItineraryCollectionViewCell", for: indexPath)
-        cell.layer.borderColor = UIColor.white.cgColor
-        cell.layer.borderWidth = 2
         return cell
     }
 
@@ -48,7 +46,7 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
 extension CurrentItineraryTableViewCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.width + 10, height: collectionView.frame.height)
     }
 
 }
