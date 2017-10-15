@@ -88,6 +88,21 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMZ-XR-kIz">
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="264"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8H-EH-Jb7">
+                                                            <rect key="frame" x="146" y="171" width="83" height="64"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="DIrections"/>
+                                                            <connections>
+                                                                <action selector="handleButtonPress:" destination="Caq-bj-6PC" eventType="touchUpInside" id="Hir-DZ-yR6"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bQL-EM-bMU" firstAttribute="leading" secondItem="lzf-Uz-i7z" secondAttribute="leading" id="3UC-e5-iPg"/>

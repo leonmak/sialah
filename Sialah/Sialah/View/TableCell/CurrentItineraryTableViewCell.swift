@@ -26,6 +26,9 @@ class CurrentItineraryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func handleButtonPress(_ sender: Any) {
+        print("asdasd")
+    }
 }
 
 // - MARK: UICollectionViewDataSource
