@@ -1,29 +1,28 @@
 //
-//  CardHighlight.swift
-//  Cards
+//  CouponCard.swift
+//  Sialah
 //
-//  Created by Paolo on 07/10/17.
-//  Copyright © 2017 Apple. All rights reserved.
+//  Created by Leon Mak on 14/10/17.
+//  Copyright © 2017 Leon Mak. All rights reserved.
 //
 
 import UIKit
 
-class CardHighlight: Card {
-
-    // SB Vars
-    var title: String = "welcome to cards XI !"
-    var itemTitle: String = "Flappy Bird"
+class CouponCard: Card {
+    
+    var title: String = "Singapore Zoo"
+    var itemTitle: String = "Mr. John Appleseed"
     var itemTitleSize: CGFloat = 14
-    var itemSubtitle: String = "Flap that !"
+    var itemSubtitle: String = "Free entry for all attractions"
     var itemSubtitleSize: CGFloat = 12
     var icon: UIImage?
     var iconRadius: CGFloat = 16
-    var buttonText: String = "view"
+    var buttonText: String = "Redeem"
     
     var delegate: CardDelegate?
-    
-    //Priv Vars
+
     internal var iconIV = UIImageView()
+    internal var overlay = UIView()
     internal var actionBtn = UIButton()
     internal var titleLbl = UILabel ()
     internal var itemTitleLbl = UILabel()
@@ -44,6 +43,7 @@ class CardHighlight: Card {
     override func initialize() {
         super.initialize()
         
+        backgroundIV.addSubview(overlay)
         backgroundIV.addSubview(iconIV)
         backgroundIV.addSubview(titleLbl)
         backgroundIV.addSubview(itemTitleLbl)
@@ -54,7 +54,7 @@ class CardHighlight: Card {
         else { bgIconIV.alpha = 0 }
     }
     
-  
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
@@ -75,20 +75,21 @@ class CardHighlight: Card {
         bgIconIV.layer.cornerRadius = iconRadius * 2
         bgIconIV.clipsToBounds = true
         
-        iconIV.frame = CGRect(x: X(insets), y: X(insets), width: X(25), height: X(25))
-        iconIV.image = icon
-        iconIV.layer.cornerRadius = iconRadius
-        iconIV.clipsToBounds = true
-        
-        titleLbl.frame = CGRect(x: X(insets), y: Y(5, from: iconIV), width: X(60), height: Y(35))
+        titleLbl.frame = CGRect(x: X(insets), y: X(insets), width: X(90), height: Y(25))
         titleLbl.text = title.uppercased()
         titleLbl.textColor = textColor
-        titleLbl.font = UIFont.systemFont(ofSize: 72, weight: .heavy)
+        titleLbl.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
         titleLbl.adjustsFontSizeToFitWidth = true
         titleLbl.setLineHeight(0.65)
         titleLbl.minimumScaleFactor = 0.1
-        titleLbl.lineBreakMode = .byTruncatingTail
+        titleLbl.lineBreakMode = .byWordWrapping
         titleLbl.numberOfLines = 3
+        
+        iconIV.frame = CGRect(x: X(insets), y: Y(insets, from: titleLbl), width: X(75), height: X(75))
+        iconIV.image = icon
+        iconIV.layer.cornerRadius = iconRadius
+        
+        iconIV.clipsToBounds = true
         
         itemTitleLbl.frame = CGRect(x: X(insets), y: RevY(17, height: Y(8)) + X(insets), width: X(80) - btnWidth, height: Y(8))
         itemTitleLbl.textColor = textColor
@@ -98,7 +99,7 @@ class CardHighlight: Card {
         itemTitleLbl.minimumScaleFactor = 0.1
         itemTitleLbl.lineBreakMode = .byTruncatingTail
         itemTitleLbl.numberOfLines = 0
-
+        
         itemSubtitleLbl.frame = CGRect(x: X(insets), y: Y(0, from: itemTitleLbl), width: X(80) - btnWidth, height: Y(13))
         itemSubtitleLbl.textColor = textColor
         itemSubtitleLbl.text = itemSubtitle
@@ -109,7 +110,7 @@ class CardHighlight: Card {
         itemSubtitleLbl.numberOfLines = 2
         itemSubtitleLbl.sizeToFit()
         
-        actionBtn.frame = CGRect(x: RevX(insets, width: btnWidth), y: RevY(insets, height: 32), width: btnWidth, height: 32)
+        actionBtn.frame = CGRect(x: RevX(insets, width: btnWidth), y: RevY(insets, height: 32), width: btnWidth, height: 36)
         actionBtn.backgroundColor = UIColor.clear
         actionBtn.layer.backgroundColor = lightColor.cgColor
         actionBtn.layer.cornerRadius = actionBtn.layer.bounds.height/2
@@ -117,18 +118,21 @@ class CardHighlight: Card {
         actionBtn.setAttributedTitle(btnTitle, for: .normal)
         actionBtn.addTarget(self, action: #selector(buttonTapped), for: UIControlEvents.touchUpInside)
         
-        backgroundIV.bringSubview(toFront: titleLbl)
+        overlay.frame = CGRect(x: X(0), y: Y(0), width: X(100), height: Y(100))
+        overlay.backgroundColor = UIColor.black.withAlphaComponent(0.45)
+        overlay.layer.cornerRadius = cardRadius
         
+        backgroundIV.bringSubview(toFront: titleLbl)
     }
     
     override func cardTapped() {
         super.cardTapped()
         delegate?.cardDidTapInside?(card: self)
     }
-   
+    
     //Actions
     @objc func buttonTapped(){
-
+        
         UIView.animate(withDuration: 0.2, animations: {
             self.actionBtn.transform = CGAffineTransform(scaleX: 0.90, y: 0.90)
         }) { (true) in
@@ -136,10 +140,10 @@ class CardHighlight: Card {
                 self.actionBtn.transform = CGAffineTransform.identity
             })
         }
-        delegate?.cardHighlightDidTapButton?(card: self, button: actionBtn)
+        delegate?.cardCouponDidTapButton?(card: self, button: actionBtn)
     }
     
-
+    
 }
 
 

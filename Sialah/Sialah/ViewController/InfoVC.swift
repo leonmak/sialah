@@ -7,37 +7,58 @@
 //
 
 import UIKit
+import CTPanoramaView
 
 class InfoVC: UIViewController {
+    
+    var insets: CGFloat = 6
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var panoView: CTPanoramaView!
+    
+    var stopover = Constants.defaultInfoStopover
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initScrollView()
+        
+    }
+
+    func initScrollView() {
+        scrollView.frame = CGRect(x: insets, y: insets,
+                                  width: view.frame.width - insets * 2,
+                                  height: view.frame.height - insets * 2)
+        initPanoView()
         initCards()
     }
-    
+
+    func initPanoView() {
+        panoView.controlMethod = .motion
+        if let pano = stopover.panoImageName {
+            panoView.image = UIImage(named: pano)
+        }
+        panoView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height * 0.3)
+        scrollView.addSubview(panoView)
+    }
+
     func initCards() {
-        let icons: [UIImage] = [
-            UIImage(named: "barbecue-1")!,
-            UIImage(named: "beer-2")!,
-            UIImage(named: "coconut")!,
-            UIImage(named: "pia-colada")!,
-            UIImage(named: "pineapple")!,
-            UIImage(named: "popsicle-1")!
-        ]
-        
-        let card = CardGroupSliding(frame: CGRect(x: 40, y: 50, width: 300 , height: 360))
+        let card = CardGroupSliding(frame: CGRect(x: X(5), y: Y(10, from: panoView), width: X(90) , height: 300))
         card.textColor = UIColor.black
-        
-        card.icons = icons
+        card.icons = Constants.iconImageNames.map { UIImage(named: $0)! }
         card.iconsSize = 60
         card.iconsRadius = 30
-        
         card.title = "from the editors"
         card.subtitle = "Welcome to XI Cards !"
-        
-        view.addSubview(card)
-
+        scrollView.addSubview(card)
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
+

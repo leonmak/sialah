@@ -18,6 +18,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>DynamicButton.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Pods-Sialah.xcscheme</key>
 		<dict>
 			<key>isShown</key>

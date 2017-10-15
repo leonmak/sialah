@@ -11,6 +11,7 @@ import UIKit
 @objc protocol CardDelegate {
     
     @objc optional func cardDidTapInside(card: Card)
+    @objc optional func cardCouponDidTapButton(card: CouponCard, button: UIButton)
     @objc optional func cardHighlightDidTapButton(card: CardHighlight, button: UIButton)
     @objc optional func cardPlayerDidPlay(card: CardPlayer)
     @objc optional func cardPlayerDidPause(card: CardPlayer)

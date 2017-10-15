@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoJ-Ok-4WF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141" y="-299"/>
+            <point key="canvasLocation" x="-727" y="33"/>
         </scene>
         <!--InfoVC-->
         <scene sceneID="5Vh-6H-lWo">
@@ -252,13 +252,35 @@
                     <view key="view" contentMode="scaleToFill" id="7pU-ya-TrX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QiC-AQ-GEL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cp8-Qt-ggG" customClass="CTPanoramaView" customModule="CTPanoramaView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QiC-AQ-GEL" firstAttribute="leading" secondItem="gvZ-8v-Bsm" secondAttribute="leading" id="IdC-AL-gVB"/>
+                            <constraint firstItem="QiC-AQ-GEL" firstAttribute="bottom" secondItem="gvZ-8v-Bsm" secondAttribute="bottom" id="UHK-mW-Swm"/>
+                            <constraint firstItem="QiC-AQ-GEL" firstAttribute="top" secondItem="gvZ-8v-Bsm" secondAttribute="top" id="nLV-ey-xiH"/>
+                            <constraint firstItem="QiC-AQ-GEL" firstAttribute="trailing" secondItem="gvZ-8v-Bsm" secondAttribute="trailing" id="vXa-rG-6Yi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gvZ-8v-Bsm"/>
                     </view>
+                    <connections>
+                        <outlet property="panoView" destination="cp8-Qt-ggG" id="gvE-5t-Fcc"/>
+                        <outlet property="scrollView" destination="QiC-AQ-GEL" id="Wze-2z-DVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNJ-WH-3AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="-188"/>
+            <point key="canvasLocation" x="1030" y="33"/>
         </scene>
     </scenes>
     <resources>

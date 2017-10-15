@@ -17,10 +17,16 @@
 		77361E591F92EC1E008D94C0 /* CardGroupSliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E521F92EC1D008D94C0 /* CardGroupSliding.swift */; };
 		77361E5A1F92EC1E008D94C0 /* CardHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E531F92EC1E008D94C0 /* CardHighlight.swift */; };
 		77361E5B1F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E541F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift */; };
+		77361E601F92FD8F008D94C0 /* CouponVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E5F1F92FD8F008D94C0 /* CouponVC.swift */; };
+		77361E641F930206008D94C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E631F930206008D94C0 /* Constants.swift */; };
+		77361E661F9303F9008D94C0 /* Stopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E651F9303F9008D94C0 /* Stopover.swift */; };
+		77361E691F9308A1008D94C0 /* CouponCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E681F9308A1008D94C0 /* CouponCard.swift */; };
+		77361E6B1F933589008D94C0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E6A1F933589008D94C0 /* Extensions.swift */; };
 		77661B8A1F92A5E3002B48FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77661B891F92A5E3002B48FF /* AppDelegate.swift */; };
 		77661B8F1F92A5E3002B48FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77661B8D1F92A5E3002B48FF /* Main.storyboard */; };
 		77661B911F92A5E3002B48FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77661B901F92A5E3002B48FF /* Assets.xcassets */; };
 		77661B941F92A5E3002B48FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */; };
+		77BF5EC81F9348D50050F882 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF5EC71F9348D50050F882 /* Category.swift */; };
 		F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */; };
 		F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */; };
 		F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */; };
@@ -42,12 +48,18 @@
 		77361E521F92EC1D008D94C0 /* CardGroupSliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupSliding.swift; sourceTree = "<group>"; };
 		77361E531F92EC1E008D94C0 /* CardHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHighlight.swift; sourceTree = "<group>"; };
 		77361E541F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player_by_Patric_Piemonte.swift; sourceTree = "<group>"; };
+		77361E5F1F92FD8F008D94C0 /* CouponVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponVC.swift; sourceTree = "<group>"; };
+		77361E631F930206008D94C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		77361E651F9303F9008D94C0 /* Stopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopover.swift; sourceTree = "<group>"; };
+		77361E681F9308A1008D94C0 /* CouponCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponCard.swift; sourceTree = "<group>"; };
+		77361E6A1F933589008D94C0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		77661B861F92A5E3002B48FF /* Sialah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sialah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77661B891F92A5E3002B48FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77661B8E1F92A5E3002B48FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77661B901F92A5E3002B48FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77661B931F92A5E3002B48FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77661B951F92A5E3002B48FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77BF5EC71F9348D50050F882 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		83990CFD1505E08F4C653F43 /* Pods_Sialah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sialah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
 		F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentItineraryTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +107,7 @@
 				77361E231F92EAC1008D94C0 /* FullViewVC.swift */,
 				77361E241F92EAC1008D94C0 /* InfoVC.swift */,
 				F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */,
+				77361E5F1F92FD8F008D94C0 /* CouponVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -117,9 +130,19 @@
 				77361E521F92EC1D008D94C0 /* CardGroupSliding.swift */,
 				77361E531F92EC1E008D94C0 /* CardHighlight.swift */,
 				77361E4F1F92EC1D008D94C0 /* CardPlayer.swift */,
+				77361E681F9308A1008D94C0 /* CouponCard.swift */,
 				77361E541F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		77361E671F9303FE008D94C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77361E651F9303F9008D94C0 /* Stopover.swift */,
+				77BF5EC71F9348D50050F882 /* Category.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		77661B7D1F92A5E2002B48FF = {
@@ -150,6 +173,9 @@
 				77661B901F92A5E3002B48FF /* Assets.xcassets */,
 				77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */,
 				77661B951F92A5E3002B48FF /* Info.plist */,
+				77361E671F9303FE008D94C0 /* Model */,
+				77361E6A1F933589008D94C0 /* Extensions.swift */,
+				77361E631F930206008D94C0 /* Constants.swift */,
 			);
 			path = Sialah;
 			sourceTree = "<group>";
@@ -310,7 +336,11 @@
 				77361E591F92EC1E008D94C0 /* CardGroupSliding.swift in Sources */,
 				F1D53C781F933CDE004DC156 /* InnerCurrentItineraryCollectionViewCell.swift in Sources */,
 				77361E551F92EC1E008D94C0 /* CardGroup.swift in Sources */,
+				77361E691F9308A1008D94C0 /* CouponCard.swift in Sources */,
 				77361E1B1F92EA61008D94C0 /* ColoredBtn.swift in Sources */,
+				77361E6B1F933589008D94C0 /* Extensions.swift in Sources */,
+				77361E601F92FD8F008D94C0 /* CouponVC.swift in Sources */,
+				77361E641F930206008D94C0 /* Constants.swift in Sources */,
 				F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */,
 				F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */,
 				77361E261F92EAC1008D94C0 /* InfoVC.swift in Sources */,
@@ -319,6 +349,8 @@
 				77361E581F92EC1E008D94C0 /* CardArticle.swift in Sources */,
 				77361E251F92EAC1008D94C0 /* FullViewVC.swift in Sources */,
 				77661B8A1F92A5E3002B48FF /* AppDelegate.swift in Sources */,
+				77361E661F9303F9008D94C0 /* Stopover.swift in Sources */,
+				77BF5EC81F9348D50050F882 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

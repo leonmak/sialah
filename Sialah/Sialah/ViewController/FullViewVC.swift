@@ -58,15 +58,13 @@ class FullViewVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .all
     }
-
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
