@@ -71,7 +71,7 @@ class ItineraryViewController: UIViewController {
     }
 
     @objc private func handleChecklistButtonPressed(_ notification: Notification) {
-        return
+        self.performSegue(withIdentifier: "segueToChecklist", sender: notification.userInfo)
     }
     
     func alert(message: String, title: String) -> Void {
@@ -129,6 +129,8 @@ class ItineraryViewController: UIViewController {
         case "ticketButtonSegue":
             let destVC = segue.destination as! CouponVC
             destVC.stopover = Constants.stopoverList[sender as! Int]
+        case "segueToChecklist":
+            return
         default:
             return
         }
