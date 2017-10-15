@@ -19,6 +19,7 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ticketsButton: DynamicButton!
     @IBOutlet weak var doneButton: DynamicButton!
 
+    var rowIndex: Int?
     var modelIndex: Int?
 
     @IBAction func handleDirectionsButtonPressed(_ sender: Any) {
@@ -26,5 +27,9 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func handleTicketButtonPressed(_ sender: Any) {
+    }
+
+    @IBAction func handleDoneButtonPressed(_ sender: Any) {
+        NotificationCenter.default.post(Notification(name: Notification.Name("doneButtonPressed"), object: self, userInfo: ["rowIndex": self.rowIndex!]))
     }
 }

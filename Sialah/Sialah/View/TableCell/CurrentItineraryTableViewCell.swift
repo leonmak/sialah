@@ -25,6 +25,7 @@ class CurrentItineraryTableViewCell: UITableViewCell {
     }
 
     var _contentHeight: CGFloat = 222
+    var rowIndex: Int?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -80,6 +81,7 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
             return UICollectionViewCell()
 
         }
+        cell.rowIndex = self.rowIndex!
         cell.card.frame.size = CGSize(width: cell.card.frame.width, height: self._contentHeight)
         cell.overlayView.frame.size = CGSize(width: cell.overlayView.frame.width, height: self._contentHeight)
         cell.backgroundImageView.frame.size = CGSize(width: cell.backgroundImageView.frame.width, height: self._contentHeight)

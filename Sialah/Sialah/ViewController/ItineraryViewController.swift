@@ -23,6 +23,8 @@ class ItineraryViewController: UIViewController {
 
     @IBOutlet weak var itineraryTableView: UITableView!
 
+    var currentIndex = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +32,19 @@ class ItineraryViewController: UIViewController {
         itineraryTableView.dataSource = self
         itineraryTableView.delegate = self
 
+        setupNotificationHandlers()
         setupMenuButton()
+    }
+
+    private func setupNotificationHandlers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleDoneButtonPressed(_:)), name: Notification.Name(rawValue: "doneButtonPressed"), object: nil)
+    }
+
+    @objc private func handleDoneButtonPressed(_ notification: Notification) {
+        let rowIndex = notification.userInfo!["rowIndex"] as! Int
+
+        currentIndex += 1
+        itineraryTableView.reloadRows(at: [IndexPath(row: rowIndex, section: 0), IndexPath(row: rowIndex+1, section: 0)], with: .fade)
     }
 
     private func setupMenuButton() {
@@ -81,7 +95,7 @@ extension ItineraryViewController: CircleExpandingMenuDelegate {
 // - MARK: UITableViewDelegate
 extension ItineraryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
+        if indexPath.row == currentIndex {
             return 280
         }
         return 180
@@ -100,14 +114,16 @@ extension ItineraryViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        if indexPath.row == currentIndex {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentItineraryTableViewCell", for: indexPath) as! CurrentItineraryTableViewCell
             cell.contentHeight = 222
+            cell.rowIndex = indexPath.row
             return cell
         }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentItineraryTableViewCell", for: indexPath) as! CurrentItineraryTableViewCell
         cell.contentHeight = 140
+        cell.rowIndex = indexPath.row
         return cell
     }
 }
