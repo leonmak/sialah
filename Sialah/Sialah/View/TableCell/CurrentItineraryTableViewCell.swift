@@ -10,14 +10,14 @@ import UIKit
 
 class CurrentItineraryTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var innerItineraryTableView: UITableView!
+    @IBOutlet weak var innerItineraryCollectionView: UICollectionView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
 
-        innerItineraryTableView.delegate = self
-        innerItineraryTableView.dataSource = self
+        innerItineraryCollectionView.delegate = self
+        innerItineraryCollectionView.dataSource = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,27 +28,27 @@ class CurrentItineraryTableViewCell: UITableViewCell {
 
 }
 
-// - MARK: UITableViewDataSource
-extension CurrentItineraryTableViewCell: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+// - MARK: UICollectionViewDataSource
+extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 12
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "InnerCurrentIntineraryTableViewCell", for: indexPath)
-        cell.textLabel?.text = "ASDS"
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InnerCurrentItineraryCollectionViewCell", for: indexPath)
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderWidth = 2
         return cell
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+
 }
 
-// - MARK: UITableViewDelegate
-extension CurrentItineraryTableViewCell: UITableViewDelegate {
+// - MARK: UICollectionViewDelegateFlowLayout
+extension CurrentItineraryTableViewCell: UICollectionViewDelegateFlowLayout {
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
+
 }

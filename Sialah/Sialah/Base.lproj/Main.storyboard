@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,30 +29,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lfz-Hl-CaO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-EM-bMU">
+                                                    <rect key="frame" x="8" y="8" width="359" height="263.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InnerCurrentIntineraryTableViewCell" id="bKT-KK-H8u">
-                                                            <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bKT-KK-H8u" id="G7A-qA-dGL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xIt-0z-VJV">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InnerCurrentItineraryCollectionViewCell" id="qDC-N0-lEY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
-                                                            </tableViewCellContentView>
-                                                        </tableViewCell>
-                                                    </prototypes>
-                                                </tableView>
+                                                            </view>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Lfz-Hl-CaO" secondAttribute="bottom" id="1lm-Ys-Jfj"/>
-                                                <constraint firstAttribute="trailing" secondItem="Lfz-Hl-CaO" secondAttribute="trailing" id="WTn-xP-2zF"/>
-                                                <constraint firstItem="Lfz-Hl-CaO" firstAttribute="leading" secondItem="lzf-Uz-i7z" secondAttribute="leading" id="eeR-eu-Ebh"/>
-                                                <constraint firstItem="Lfz-Hl-CaO" firstAttribute="top" secondItem="lzf-Uz-i7z" secondAttribute="top" id="hDN-Tu-rHG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bQL-EM-bMU" secondAttribute="trailing" id="9QZ-zg-E9J"/>
+                                                <constraint firstItem="bQL-EM-bMU" firstAttribute="top" secondItem="lzf-Uz-i7z" secondAttribute="topMargin" id="DSs-ee-fDz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bQL-EM-bMU" secondAttribute="bottom" id="d0Z-wP-eFv"/>
+                                                <constraint firstItem="bQL-EM-bMU" firstAttribute="leading" secondItem="lzf-Uz-i7z" secondAttribute="leadingMargin" id="mvk-I7-kxp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="innerItineraryTableView" destination="Lfz-Hl-CaO" id="ymE-Xe-yyA"/>
+                                            <outlet property="innerItineraryCollectionView" destination="bQL-EM-bMU" id="VeW-QM-GPU"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OtherItineraryTableViewCell" rowHeight="140" id="6bT-6C-pZ5" customClass="OtherItineraryTableViewCell" customModule="Sialah" customModuleProvider="target">
