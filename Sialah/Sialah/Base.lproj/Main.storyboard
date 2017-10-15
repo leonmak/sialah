@@ -92,13 +92,16 @@
                                                     <rect key="frame" x="0.0" y="8" width="375" height="264"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8H-EH-Jb7">
-                                                            <rect key="frame" x="146" y="171" width="83" height="64"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8H-EH-Jb7" customClass="DynamicButton" customModule="DynamicButton">
+                                                            <rect key="frame" x="55" y="183" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <state key="normal" title="DIrections"/>
-                                                            <connections>
-                                                                <action selector="handleButtonPress:" destination="Caq-bj-6PC" eventType="touchUpInside" id="Hir-DZ-yR6"/>
-                                                            </connections>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                            <state key="normal" image="icon_map"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -112,6 +115,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="directionsButton" destination="h8H-EH-Jb7" id="egs-JI-1PI"/>
                                             <outlet property="innerItineraryCollectionView" destination="bQL-EM-bMU" id="VeW-QM-GPU"/>
                                         </connections>
                                     </tableViewCell>
@@ -200,5 +204,6 @@
     </scenes>
     <resources>
         <image name="Merlion-Sentosa-1024x675" width="1024" height="675"/>
+        <image name="icon_map" width="50" height="50"/>
     </resources>
 </document>

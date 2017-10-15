@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import DynamicButton
 
 class CurrentItineraryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var innerItineraryCollectionView: UICollectionView!
+    @IBOutlet weak var directionsButton: DynamicButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +20,10 @@ class CurrentItineraryTableViewCell: UITableViewCell {
 
         innerItineraryCollectionView.delegate = self
         innerItineraryCollectionView.dataSource = self
+        directionsButton.layer.cornerRadius = directionsButton.frame.height / 2.0
+        directionsButton.contentMode = .center
+        directionsButton.imageView?.contentMode = .center
+        directionsButton.imageView?.contentScaleFactor = 1.5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,9 +32,7 @@ class CurrentItineraryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func handleButtonPress(_ sender: Any) {
-        print("asdasd")
-    }
+
 }
 
 // - MARK: UICollectionViewDataSource

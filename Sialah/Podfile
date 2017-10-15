@@ -8,5 +8,5 @@ target 'Sialah' do
   # Pods for Sialah
   pod 'CTPanoramaView'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
-
+  pod 'DynamicButton'
 end
