@@ -113,6 +113,8 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
                 cell.openingHoursLabel.text = ""
             }
 
+            cell.checklistButton.isHidden = false
+            cell.checklistButton.isEnabled = true
             cell.directionsButton.isHidden = true
             cell.ticketsButton.isHidden = true
             cell.directionsButton.isEnabled = false
@@ -148,6 +150,7 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
         prepare(button: cell.directionsButton)
         prepare(button: cell.ticketsButton)
         prepare(button: cell.doneButton)
+        prepare(button: cell.checklistButton)
     }
 
     private func prepare(button: DynamicButton) {

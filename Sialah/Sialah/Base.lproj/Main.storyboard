@@ -153,6 +153,20 @@
                                                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
+                                                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ey-MX-3yU" userLabel="Checklist Button" customClass="DynamicButton" customModule="DynamicButton">
+                                                                                        <rect key="frame" x="31" y="181" width="50" height="50"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                                        <state key="normal" image="icons_checklist"/>
+                                                                                        <userDefinedRuntimeAttributes>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                                                <real key="value" value="0.0"/>
+                                                                                            </userDefinedRuntimeAttribute>
+                                                                                        </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="handleChecklistButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="MVc-nc-8cV"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             </view>
@@ -166,6 +180,7 @@
                                                                 <outlet property="backgroundImageView" destination="It4-rn-Und" id="srM-bn-eQa"/>
                                                                 <outlet property="busLabel" destination="WWc-vl-eAU" id="Hg2-4j-SUJ"/>
                                                                 <outlet property="card" destination="dB5-vB-rmW" id="zKf-RG-Hgj"/>
+                                                                <outlet property="checklistButton" destination="5ey-MX-3yU" id="MiU-MG-FEI"/>
                                                                 <outlet property="directionsButton" destination="Uh1-Uv-MUg" id="BP8-l4-asr"/>
                                                                 <outlet property="doneButton" destination="AR2-Ai-Bp0" id="IiP-ox-5fB"/>
                                                                 <outlet property="itineraryTitle" destination="Yvq-eY-HTK" id="X61-XA-Fy5"/>
@@ -510,6 +525,7 @@
         <image name="crab final" width="1508" height="499"/>
         <image name="culture final copy" width="597" height="200"/>
         <image name="icon_map" width="50" height="50"/>
+        <image name="icons_checklist" width="50" height="50"/>
         <image name="icons_done" width="50" height="50"/>
         <image name="icons_ticket" width="50" height="50"/>
     </resources>

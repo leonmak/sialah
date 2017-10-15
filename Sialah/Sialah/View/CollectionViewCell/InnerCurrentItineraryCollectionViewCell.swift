@@ -18,6 +18,7 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var directionsButton: DynamicButton!
     @IBOutlet weak var ticketsButton: DynamicButton!
     @IBOutlet weak var doneButton: DynamicButton!
+    @IBOutlet weak var checklistButton: DynamicButton!
 
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var wifiLabel: UILabel!
@@ -36,6 +37,9 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
 
     @IBAction func handleDoneButtonPressed(_ sender: Any) {
         NotificationCenter.default.post(Notification(name: Notification.Name("doneButtonPressed"), object: self, userInfo: ["rowIndex": self.rowIndex!]))
+    }
+    @IBAction func handleChecklistButtonPressed(_ sender: Any) {
+        NotificationCenter.default.post(Notification(name: Notification.Name("checklistButtonPressed"), object: self, userInfo: nil))
     }
 }
 

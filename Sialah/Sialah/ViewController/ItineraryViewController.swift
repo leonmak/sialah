@@ -54,6 +54,7 @@ class ItineraryViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(handleDoneButtonPressed(_:)), name: Notification.Name(rawValue: "doneButtonPressed"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleInfoCardPressed(_:)), name: Notification.Name(rawValue: "infoCardPressed"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleTicketButtonPressed(_:)), name: Notification.Name(rawValue: "ticketButtonPressed"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleChecklistButtonPressed(_:)), name: Notification.Name(rawValue: "checklistButtonPressed"), object: nil)
     }
 
     @objc private func handleDoneButtonPressed(_ notification: Notification) {
@@ -67,6 +68,10 @@ class ItineraryViewController: UIViewController {
                 self.alert(message: "A venue for your upcoming event is ending.", title: "Venue early closure")
             }
         }
+    }
+
+    @objc private func handleChecklistButtonPressed(_ notification: Notification) {
+        return
     }
     
     func alert(message: String, title: String) -> Void {
