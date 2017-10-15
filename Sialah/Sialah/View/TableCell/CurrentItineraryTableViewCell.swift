@@ -88,6 +88,8 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
         prepareButtons(for: cell)
 
         let columnIndex = indexPath.row
+        cell.modelIndex = (columnIndex + self.rowIndex!) % Constants.stopoverList.count
+        cell.card._delegate = cell
         cell.backgroundImageView.image = UIImage(named: Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].wallImageName!)
         cell.itineraryTitle.text = Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].name
         cell.ratingLabel.text = String(describing: "\(Constants.stopoverList[(columnIndex + self.rowIndex!) % Constants.stopoverList.count].rating!) ☆")

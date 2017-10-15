@@ -52,6 +52,7 @@ class ItineraryViewController: UIViewController {
 
     private func setupNotificationHandlers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleDoneButtonPressed(_:)), name: Notification.Name(rawValue: "doneButtonPressed"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleInfoCardPressed(_:)), name: Notification.Name(rawValue: "infoCardPressed"), object: nil)
     }
 
     @objc private func handleDoneButtonPressed(_ notification: Notification) {
@@ -62,6 +63,12 @@ class ItineraryViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0.2)) {
             self.itineraryTableView.scrollToRow(at: IndexPath(row: self.currentIndex, section: 0), at: .top, animated: true)
         }
+    }
+
+    @objc private func handleInfoCardPressed(_ notification: Notification) {
+        let modelIndex = notification.userInfo!["modelIndex"] as! Int
+        print("pressed")
+        self.performSegue(withIdentifier: "infoCardSegue", sender: modelIndex)
     }
 
     private func setupMenuButton() {
@@ -84,15 +91,18 @@ class ItineraryViewController: UIViewController {
         return true
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        switch segue.identifier! {
+        case "infoCardSegue":
+            let destVC = segue.destination as! InfoVC
+            destVC.stopover = Constants.stopoverList[sender as! Int]
+        default:
+            return
+        }
     }
-    */
 
 }
 

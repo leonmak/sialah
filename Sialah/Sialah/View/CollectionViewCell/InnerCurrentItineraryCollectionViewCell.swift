@@ -37,3 +37,9 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
         NotificationCenter.default.post(Notification(name: Notification.Name("doneButtonPressed"), object: self, userInfo: ["rowIndex": self.rowIndex!]))
     }
 }
+
+extension InnerCurrentItineraryCollectionViewCell: CardDelegate {
+    func cardDidTapInside(card: Card) {
+        NotificationCenter.default.post(name: Notification.Name("infoCardPressed"), object: self, userInfo: ["modelIndex": self.modelIndex!])
+    }
+}

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol CardDelegate {
+@objc protocol CardDelegate: class {
     
     @objc optional func cardDidTapInside(card: Card)
     @objc optional func cardCouponDidTapButton(card: CouponCard, button: UIButton)
@@ -27,6 +27,8 @@ class Card: UIView {
     var textColor: UIColor = UIColor.black
     var insets: CGFloat = 6
     var cardRadius: CGFloat = 20
+
+    weak var _delegate: CardDelegate?
     
     override var backgroundColor: UIColor? {
         didSet(new) {
@@ -82,6 +84,7 @@ class Card: UIView {
     
     //Actions
     @objc func cardTapped(){
+        self._delegate?.cardDidTapInside?(card: self)
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }) { (true) in
