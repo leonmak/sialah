@@ -39,17 +39,7 @@ class ItineraryViewController: UIViewController {
     
     
     func setupAirlineCards() {
-        let insets: CGFloat = 6.0
-        let arrivalCardFrame = CGRect(x: X(insets), y: Y(-0.75*insets), width: X(100-insets*2), height: Y(3*insets))
-        let arrivalCardGroup = CardArticle(frame: arrivalCardFrame)
-        arrivalCardGroup.title = "Arrival"
-        arrivalCardGroup.category = ""
-        arrivalCardGroup.textColor = UIColor.white
-        arrivalCardGroup.subtitle = "Flight SQ325 - FRA-SIN"
-        arrivalCardGroup.backgroundImage = UIImage(named: "airport")
-        view.addSubview(arrivalCardGroup)
-        
-        let departCardFrame = CGRect(x: X(insets), y: Y(100-2*insets), width: X(100-insets*2), height: Y(3*insets))
+        let departCardFrame = CGRect(x: X(0), y: Y(85), width: X(100), height: Y(20))
         let departCardGroup = CardArticle(frame:  departCardFrame)
         departCardGroup.title = "Departure"
         departCardGroup.subtitleSize = 30.0
