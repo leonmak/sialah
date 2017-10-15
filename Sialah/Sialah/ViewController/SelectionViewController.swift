@@ -31,4 +31,8 @@ class SelectionViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        performSegue(withIdentifier: "ItineraryVC", sender: nil)
+    }
 }

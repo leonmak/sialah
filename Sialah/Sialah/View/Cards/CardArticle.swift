@@ -11,11 +11,11 @@ import UIKit
 class CardArticle: Card {
     
     // SB Vars
-    var title: String = "The Art of the Impossible"
+    var title: String = ""
     var titleSize: CGFloat = 26
-    var subtitle: String = "Inside the extraordinary world of Monument Valley 2"
+    var subtitle: String = ""
     var subtitleSize: CGFloat = 17
-    var category: String = "world premiere"
+    var category: String = ""
     var blurEffect: UIBlurEffectStyle = UIBlurEffectStyle.extraLight
     
     // Delegate

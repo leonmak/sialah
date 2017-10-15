@@ -92,11 +92,12 @@ class InfoVC: UIViewController, CardDelegate {
             : CGRect(x: X(insets), y: Y(10, from: stopoverLabel), width: X(90) , height: 300)
 
         let card = CardHighlight(frame: titlePosition)
-        card.title = "\(stopover.name) tours"
+        card.title = "\(stopover.name)"
         card.itemSubtitle = stopover.description
         card.itemTitle = "Description"
         card.buttonText = "More info"
         card.textColor = UIColor.white
+        card.delegate = self
         
         if let wallImageName = stopover.wallImageName {
             card.backgroundImage = UIImage(named: wallImageName)
@@ -157,7 +158,6 @@ class InfoVC: UIViewController, CardDelegate {
     
     // MARK: Button pressed
     func cardHighlightDidTapButton(card: CardHighlight, button: UIButton) {
-        print(button.titleLabel!.text!)
         switch button.titleLabel!.text! {
         case "ENLARGE":
             performSegue(withIdentifier: "CouponVC", sender: stopover)

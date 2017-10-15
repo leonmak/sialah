@@ -63,7 +63,18 @@ class ItineraryViewController: UIViewController {
         itineraryTableView.reloadRows(at: [IndexPath(row: rowIndex, section: 0), IndexPath(row: rowIndex+1, section: 0)], with: .fade)
         DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0.2)) {
             self.itineraryTableView.scrollToRow(at: IndexPath(row: self.currentIndex, section: 0), at: .top, animated: true)
+            if self.currentIndex == 3 {
+                self.alert(message: "A venue for your upcoming event is ending.", title: "Venue early closure")
+            }
         }
+    }
+    
+    func alert(message: String, title: String) -> Void {
+        let alert = UIAlertController(title: title as String, message: message as String, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: {_ in
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
     @objc private func handleInfoCardPressed(_ notification: Notification) {
@@ -87,7 +98,7 @@ class ItineraryViewController: UIViewController {
         circleExpandingMenu.delegate = self
         circleExpandingMenu.backgroundColor = UIColor(red:0.19, green:0.57, blue:1, alpha:1)
         circleExpandingMenu.layer.cornerRadius = circleExpandingMenu.frame.size.width / 2
-
+        
         self.view.addSubview(circleExpandingMenu)
     }
     
@@ -128,6 +139,7 @@ extension ItineraryViewController: CircleExpandingMenuDelegate {
     }
 
     func circleExpandingMenu(_ circleExpandingMenu: CircleExpandingMenu, buttonDidSelected button: UIButton, atIndex: Int) {
+        performSegue(withIdentifier: "FoodVC", sender: nil)
         return
     }
 

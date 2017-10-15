@@ -27,6 +27,7 @@
 		77661B911F92A5E3002B48FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77661B901F92A5E3002B48FF /* Assets.xcassets */; };
 		77661B941F92A5E3002B48FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */; };
 		77BF5EC81F9348D50050F882 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BF5EC71F9348D50050F882 /* Category.swift */; };
+		77CFD4A11F93EBDA005F6CF6 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CFD4A01F93EBDA005F6CF6 /* FoodVC.swift */; };
 		F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */; };
 		F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */; };
 		F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		77661B931F92A5E3002B48FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77661B951F92A5E3002B48FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77BF5EC71F9348D50050F882 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		77CFD4A01F93EBDA005F6CF6 /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 		83990CFD1505E08F4C653F43 /* Pods_Sialah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sialah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
 		F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentItineraryTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */,
 				77361E5F1F92FD8F008D94C0 /* CouponVC.swift */,
 				F15895FC1F93C40300CF5598 /* SelectionViewController.swift */,
+				77CFD4A01F93EBDA005F6CF6 /* FoodVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				77361E691F9308A1008D94C0 /* CouponCard.swift in Sources */,
 				77361E1B1F92EA61008D94C0 /* ColoredBtn.swift in Sources */,
 				77361E6B1F933589008D94C0 /* Extensions.swift in Sources */,
+				77CFD4A11F93EBDA005F6CF6 /* FoodVC.swift in Sources */,
 				77361E601F92FD8F008D94C0 /* CouponVC.swift in Sources */,
 				77361E641F930206008D94C0 /* Constants.swift in Sources */,
 				F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */,

@@ -47,7 +47,7 @@ struct Constants {
     static let stopoverList = _stopoverList + _stopoverList + _stopoverList + _stopoverList
 
     static let _stopoverList = [
-        Stopover(name: "Hyatt Hotel", description:"A 5-minute walk from Orchard MRT Station, Grand Hyatt Singapore offers luxurious accommodation, an elegant outdoor pool and 6 dining options including the award-winning restaurant mezza9. There is also a spa.",
+        Stopover(name: "Hyatt Hotel", description:"Grand Hyatt Singapore offers luxurious accommodation, an elegant outdoor pool and 6 dining options including the award-winning restaurant mezza9",
                  panoImageName: "hotel-pano", wallImageName: "hotel", busColor: "blue",
                  events: ["Free dinner for more than $30 spent on lunch."],
                  url: URL(string: "https://singapore.grand.hyatt.com"),
