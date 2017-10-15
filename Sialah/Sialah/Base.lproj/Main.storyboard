@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V30-Bq-5vO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s1u-6j-An9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,50 +9,119 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Full ViewVC-->
+        <!--Itinerary View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FullViewVC" customModule="Sialah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ItineraryViewController" customModule="Sialah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEv-Jv-2z6" customClass="CTPanoramaView" customModule="CTPanoramaView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iVp-Fg-amL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrentItineraryTableViewCell" rowHeight="280" id="Caq-bj-6PC" customClass="CurrentItineraryTableViewCell" customModule="Sialah" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="280"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Caq-bj-6PC" id="lzf-Uz-i7z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Huge Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q3-GS-o8q">
+                                                    <rect key="frame" x="65" y="86" width="226" height="91"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="testLabel" destination="2Q3-GS-o8q" id="GhZ-bP-qOO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OtherItineraryTableViewCell" rowHeight="140" id="6bT-6C-pZ5" customClass="OtherItineraryTableViewCell" customModule="Sialah" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="308" width="375" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6bT-6C-pZ5" id="38A-Hg-ClD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Small Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZZ-SO-NVO">
+                                                    <rect key="frame" x="47" y="35" width="283" height="57"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xEv-Jv-2z6" secondAttribute="bottom" id="CmL-zD-jtq"/>
-                            <constraint firstItem="xEv-Jv-2z6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="K2v-6G-yeH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xEv-Jv-2z6" secondAttribute="trailing" id="kGz-cb-85T"/>
-                            <constraint firstItem="xEv-Jv-2z6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tlz-qh-hLt"/>
+                            <constraint firstItem="iVp-Fg-amL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="POJ-4U-spI"/>
+                            <constraint firstItem="iVp-Fg-amL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WKt-jJ-JIZ"/>
+                            <constraint firstItem="iVp-Fg-amL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xx3-3R-G8B"/>
+                            <constraint firstItem="iVp-Fg-amL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="g5O-BV-6pr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="panoView" destination="xEv-Jv-2z6" id="sRR-T6-WNd"/>
+                        <outlet property="itineraryTableView" destination="iVp-Fg-amL" id="kkV-QP-PAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="29.23538230884558"/>
+            <point key="canvasLocation" x="117.59999999999999" y="32.833583208395808"/>
+        </scene>
+        <!--Full ViewVC-->
+        <scene sceneID="gLq-L0-vrJ">
+            <objects>
+                <viewController id="fFC-8U-i4n" customClass="FullViewVC" customModule="Sialah" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5PE-NN-uQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogg-8E-LSt" customClass="CTPanoramaView" customModule="CTPanoramaView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uSV-yg-w8K" firstAttribute="bottom" secondItem="ogg-8E-LSt" secondAttribute="bottom" id="6SV-kS-486"/>
+                            <constraint firstAttribute="trailing" secondItem="ogg-8E-LSt" secondAttribute="trailing" id="Tko-FL-9X4"/>
+                            <constraint firstItem="ogg-8E-LSt" firstAttribute="top" secondItem="uSV-yg-w8K" secondAttribute="top" id="cOe-0y-xyz"/>
+                            <constraint firstItem="ogg-8E-LSt" firstAttribute="leading" secondItem="uSV-yg-w8K" secondAttribute="leading" id="yPn-BJ-qkL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uSV-yg-w8K"/>
+                    </view>
+                    <connections>
+                        <outlet property="panoView" destination="ogg-8E-LSt" id="Jcs-jD-rzt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IoJ-Ok-4WF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="-299"/>
         </scene>
         <!--InfoVC-->
-        <scene sceneID="ZiR-iy-GWN">
+        <scene sceneID="5Vh-6H-lWo">
             <objects>
-                <viewController id="V30-Bq-5vO" customClass="InfoVC" customModule="Sialah" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9x2-tS-TqT">
+                <viewController id="s1u-6j-An9" customClass="InfoVC" customModule="Sialah" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7pU-ya-TrX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="wo0-GT-xem"/>
+                        <viewLayoutGuide key="safeArea" id="gvZ-8v-Bsm"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pvw-qW-bLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNJ-WH-3AO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752.79999999999995" y="28.335832083958024"/>
+            <point key="canvasLocation" x="2222" y="-188"/>
         </scene>
     </scenes>
 </document>

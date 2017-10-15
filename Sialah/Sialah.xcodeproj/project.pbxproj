@@ -7,45 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77361E1B1F92EA61008D94C0 /* ColoredBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E1A1F92EA60008D94C0 /* ColoredBtn.swift */; };
+		77361E251F92EAC1008D94C0 /* FullViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E231F92EAC1008D94C0 /* FullViewVC.swift */; };
+		77361E261F92EAC1008D94C0 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E241F92EAC1008D94C0 /* InfoVC.swift */; };
+		77361E551F92EC1E008D94C0 /* CardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E4E1F92EC1D008D94C0 /* CardGroup.swift */; };
+		77361E561F92EC1E008D94C0 /* CardPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E4F1F92EC1D008D94C0 /* CardPlayer.swift */; };
+		77361E571F92EC1E008D94C0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E501F92EC1D008D94C0 /* Card.swift */; };
+		77361E581F92EC1E008D94C0 /* CardArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E511F92EC1D008D94C0 /* CardArticle.swift */; };
+		77361E591F92EC1E008D94C0 /* CardGroupSliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E521F92EC1D008D94C0 /* CardGroupSliding.swift */; };
+		77361E5A1F92EC1E008D94C0 /* CardHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E531F92EC1E008D94C0 /* CardHighlight.swift */; };
+		77361E5B1F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77361E541F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift */; };
 		77661B8A1F92A5E3002B48FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77661B891F92A5E3002B48FF /* AppDelegate.swift */; };
-		77661B8C1F92A5E3002B48FF /* FullViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77661B8B1F92A5E3002B48FF /* FullViewVC.swift */; };
 		77661B8F1F92A5E3002B48FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77661B8D1F92A5E3002B48FF /* Main.storyboard */; };
 		77661B911F92A5E3002B48FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77661B901F92A5E3002B48FF /* Assets.xcassets */; };
 		77661B941F92A5E3002B48FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */; };
-		77661BA31F92BADD002B48FF /* ColoredBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77661BA21F92BADD002B48FF /* ColoredBtn.swift */; };
-		77661BA51F92CC3A002B48FF /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77661BA41F92CC3A002B48FF /* InfoVC.swift */; };
-		77BDDB0C1F92DD4400CF0439 /* Pods_Sialah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091C5206C90F675F4872937C /* Pods_Sialah.framework */; };
-		77BDDB181F92E5D500CF0439 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDDB171F92E5D500CF0439 /* Card.swift */; };
-		77BDDB1A1F92E5D700CF0439 /* CardArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDDB191F92E5D700CF0439 /* CardArticle.swift */; };
-		77BDDB1C1F92E5DA00CF0439 /* CardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDDB1B1F92E5DA00CF0439 /* CardGroup.swift */; };
-		77BDDB1E1F92E5DD00CF0439 /* CardHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDDB1D1F92E5DD00CF0439 /* CardHighlight.swift */; };
-		77BDDB211F92E5E300CF0439 /* CardGroupSliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDDB201F92E5E300CF0439 /* CardGroupSliding.swift */; };
-		77BDDB231F92E5E500CF0439 /* CardPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDDB221F92E5E500CF0439 /* CardPlayer.swift */; };
-		77BDDB251F92E5E600CF0439 /* Player_by_Patric_Piemonte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BDDB241F92E5E600CF0439 /* Player_by_Patric_Piemonte.swift */; };
+		F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */; };
+		F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */; };
+		F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */; };
+		F72CE51DC787F493433C5B8C /* Pods_Sialah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83990CFD1505E08F4C653F43 /* Pods_Sialah.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		091C5206C90F675F4872937C /* Pods_Sialah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sialah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CCDB473ABBB11CD35151ED7 /* Pods-Sialah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sialah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sialah/Pods-Sialah.release.xcconfig"; sourceTree = "<group>"; };
+		44B1F6ACB0C2E6D7943B2CF8 /* Pods-Sialah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sialah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sialah/Pods-Sialah.debug.xcconfig"; sourceTree = "<group>"; };
+		6DD84F12F1B15D53D60B406D /* Pods-Sialah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sialah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sialah/Pods-Sialah.release.xcconfig"; sourceTree = "<group>"; };
+		77361E1A1F92EA60008D94C0 /* ColoredBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredBtn.swift; sourceTree = "<group>"; };
+		77361E231F92EAC1008D94C0 /* FullViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewVC.swift; sourceTree = "<group>"; };
+		77361E241F92EAC1008D94C0 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		77361E4E1F92EC1D008D94C0 /* CardGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroup.swift; sourceTree = "<group>"; };
+		77361E4F1F92EC1D008D94C0 /* CardPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlayer.swift; sourceTree = "<group>"; };
+		77361E501F92EC1D008D94C0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		77361E511F92EC1D008D94C0 /* CardArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardArticle.swift; sourceTree = "<group>"; };
+		77361E521F92EC1D008D94C0 /* CardGroupSliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupSliding.swift; sourceTree = "<group>"; };
+		77361E531F92EC1E008D94C0 /* CardHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHighlight.swift; sourceTree = "<group>"; };
+		77361E541F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player_by_Patric_Piemonte.swift; sourceTree = "<group>"; };
 		77661B861F92A5E3002B48FF /* Sialah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sialah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77661B891F92A5E3002B48FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77661B8B1F92A5E3002B48FF /* FullViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewVC.swift; sourceTree = "<group>"; };
 		77661B8E1F92A5E3002B48FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77661B901F92A5E3002B48FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77661B931F92A5E3002B48FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77661B951F92A5E3002B48FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77661BA21F92BADD002B48FF /* ColoredBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredBtn.swift; sourceTree = "<group>"; };
-		77661BA41F92CC3A002B48FF /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
-		77BDDB0B1F92DD3000CF0439 /* Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77BDDB0F1F92E1F900CF0439 /* Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77BDDB171F92E5D500CF0439 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		77BDDB191F92E5D700CF0439 /* CardArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardArticle.swift; sourceTree = "<group>"; };
-		77BDDB1B1F92E5DA00CF0439 /* CardGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroup.swift; sourceTree = "<group>"; };
-		77BDDB1D1F92E5DD00CF0439 /* CardHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHighlight.swift; sourceTree = "<group>"; };
-		77BDDB201F92E5E300CF0439 /* CardGroupSliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupSliding.swift; sourceTree = "<group>"; };
-		77BDDB221F92E5E500CF0439 /* CardPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlayer.swift; sourceTree = "<group>"; };
-		77BDDB241F92E5E600CF0439 /* Player_by_Patric_Piemonte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player_by_Patric_Piemonte.swift; sourceTree = "<group>"; };
-		DE9D3B6101B996B8E8B50D91 /* Pods-Sialah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sialah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sialah/Pods-Sialah.debug.xcconfig"; sourceTree = "<group>"; };
+		83990CFD1505E08F4C653F43 /* Pods_Sialah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sialah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
+		F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentItineraryTableViewCell.swift; sourceTree = "<group>"; };
+		F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherItineraryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,23 +57,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77BDDB0C1F92DD4400CF0439 /* Pods_Sialah.framework in Frameworks */,
+				F72CE51DC787F493433C5B8C /* Pods_Sialah.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		77361E101F92E669008D94C0 /* Cards */ = {
+		03A382C470B60A4A54E5BFF6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				77BDDB241F92E5E600CF0439 /* Player_by_Patric_Piemonte.swift */,
-				77BDDB221F92E5E500CF0439 /* CardPlayer.swift */,
-				77BDDB201F92E5E300CF0439 /* CardGroupSliding.swift */,
-				77BDDB1D1F92E5DD00CF0439 /* CardHighlight.swift */,
-				77BDDB1B1F92E5DA00CF0439 /* CardGroup.swift */,
-				77BDDB191F92E5D700CF0439 /* CardArticle.swift */,
-				77BDDB171F92E5D500CF0439 /* Card.swift */,
+				44B1F6ACB0C2E6D7943B2CF8 /* Pods-Sialah.debug.xcconfig */,
+				6DD84F12F1B15D53D60B406D /* Pods-Sialah.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77361E1C1F92EA6B008D94C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77361E5C1F92EC23008D94C0 /* Cards */,
+				77361E1E1F92EA9A008D94C0 /* TableCell */,
+				77361E1A1F92EA60008D94C0 /* ColoredBtn.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77361E1D1F92EA7F008D94C0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				77361E231F92EAC1008D94C0 /* FullViewVC.swift */,
+				77361E241F92EAC1008D94C0 /* InfoVC.swift */,
+				F101B7951F92C9FF004B4570 /* ItineraryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		77361E1E1F92EA9A008D94C0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				F101B7971F92CE83004B4570 /* CurrentItineraryTableViewCell.swift */,
+				F101B7991F92CEBC004B4570 /* OtherItineraryTableViewCell.swift */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		77361E5C1F92EC23008D94C0 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				77361E501F92EC1D008D94C0 /* Card.swift */,
+				77361E511F92EC1D008D94C0 /* CardArticle.swift */,
+				77361E4E1F92EC1D008D94C0 /* CardGroup.swift */,
+				77361E521F92EC1D008D94C0 /* CardGroupSliding.swift */,
+				77361E531F92EC1E008D94C0 /* CardHighlight.swift */,
+				77361E4F1F92EC1D008D94C0 /* CardPlayer.swift */,
+				77361E541F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -79,8 +121,8 @@
 			children = (
 				77661B881F92A5E3002B48FF /* Sialah */,
 				77661B871F92A5E3002B48FF /* Products */,
-				EAC65BDC49887FB37B5AFDF2 /* Pods */,
-				BB89551844C06F2CB1E4B24F /* Frameworks */,
+				03A382C470B60A4A54E5BFF6 /* Pods */,
+				B15ABD92313F6278D54FDE67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,10 +137,9 @@
 		77661B881F92A5E3002B48FF /* Sialah */ = {
 			isa = PBXGroup;
 			children = (
-				77661BA11F92BACE002B48FF /* View */,
+				77361E1D1F92EA7F008D94C0 /* ViewController */,
+				77361E1C1F92EA6B008D94C0 /* View */,
 				77661B891F92A5E3002B48FF /* AppDelegate.swift */,
-				77661B8B1F92A5E3002B48FF /* FullViewVC.swift */,
-				77661BA41F92CC3A002B48FF /* InfoVC.swift */,
 				77661B8D1F92A5E3002B48FF /* Main.storyboard */,
 				77661B901F92A5E3002B48FF /* Assets.xcassets */,
 				77661B921F92A5E3002B48FF /* LaunchScreen.storyboard */,
@@ -107,32 +148,12 @@
 			path = Sialah;
 			sourceTree = "<group>";
 		};
-		77661BA11F92BACE002B48FF /* View */ = {
+		B15ABD92313F6278D54FDE67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77361E101F92E669008D94C0 /* Cards */,
-				77661BA21F92BADD002B48FF /* ColoredBtn.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BB89551844C06F2CB1E4B24F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				77BDDB0F1F92E1F900CF0439 /* Cards.framework */,
-				77BDDB0B1F92DD3000CF0439 /* Cards.framework */,
-				091C5206C90F675F4872937C /* Pods_Sialah.framework */,
+				83990CFD1505E08F4C653F43 /* Pods_Sialah.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EAC65BDC49887FB37B5AFDF2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DE9D3B6101B996B8E8B50D91 /* Pods-Sialah.debug.xcconfig */,
-				4CCDB473ABBB11CD35151ED7 /* Pods-Sialah.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,12 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77661B981F92A5E3002B48FF /* Build configuration list for PBXNativeTarget "Sialah" */;
 			buildPhases = (
-				F76516FC6DD6C15AF6EBBB10 /* [CP] Check Pods Manifest.lock */,
+				3B1334D93F96FC85E90D92D3 /* [CP] Check Pods Manifest.lock */,
 				77661B821F92A5E3002B48FF /* Sources */,
 				77661B831F92A5E3002B48FF /* Frameworks */,
 				77661B841F92A5E3002B48FF /* Resources */,
-				9A7189E2D21C27AE60C5A980 /* [CP] Embed Pods Frameworks */,
-				B63E6D058442BAA9D3D1B5F1 /* [CP] Copy Pods Resources */,
+				534A7D02869B139EFC26FC13 /* [CP] Embed Pods Frameworks */,
+				CCEDDC04DCB0DF28ADD86E91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,7 +227,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9A7189E2D21C27AE60C5A980 /* [CP] Embed Pods Frameworks */ = {
+		3B1334D93F96FC85E90D92D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sialah-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		534A7D02869B139EFC26FC13 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,7 +265,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sialah/Pods-Sialah-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B63E6D058442BAA9D3D1B5F1 /* [CP] Copy Pods Resources */ = {
+		CCEDDC04DCB0DF28ADD86E91 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,24 +280,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sialah/Pods-Sialah-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F76516FC6DD6C15AF6EBBB10 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Sialah-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,17 +287,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77661BA51F92CC3A002B48FF /* InfoVC.swift in Sources */,
-				77661BA31F92BADD002B48FF /* ColoredBtn.swift in Sources */,
-				77661B8C1F92A5E3002B48FF /* FullViewVC.swift in Sources */,
+				77361E561F92EC1E008D94C0 /* CardPlayer.swift in Sources */,
+				F101B79A1F92CEBC004B4570 /* OtherItineraryTableViewCell.swift in Sources */,
+				77361E5A1F92EC1E008D94C0 /* CardHighlight.swift in Sources */,
+				77361E591F92EC1E008D94C0 /* CardGroupSliding.swift in Sources */,
+				77361E551F92EC1E008D94C0 /* CardGroup.swift in Sources */,
+				77361E1B1F92EA61008D94C0 /* ColoredBtn.swift in Sources */,
+				F101B7961F92C9FF004B4570 /* ItineraryViewController.swift in Sources */,
+				F101B7981F92CE83004B4570 /* CurrentItineraryTableViewCell.swift in Sources */,
+				77361E261F92EAC1008D94C0 /* InfoVC.swift in Sources */,
+				77361E5B1F92EC1E008D94C0 /* Player_by_Patric_Piemonte.swift in Sources */,
+				77361E571F92EC1E008D94C0 /* Card.swift in Sources */,
+				77361E581F92EC1E008D94C0 /* CardArticle.swift in Sources */,
+				77361E251F92EAC1008D94C0 /* FullViewVC.swift in Sources */,
 				77661B8A1F92A5E3002B48FF /* AppDelegate.swift in Sources */,
-				77BDDB181F92E5D500CF0439 /* Card.swift in Sources */,
-				77BDDB231F92E5E500CF0439 /* CardPlayer.swift in Sources */,
-				77BDDB251F92E5E600CF0439 /* Player_by_Patric_Piemonte.swift in Sources */,
-				77BDDB211F92E5E300CF0439 /* CardGroupSliding.swift in Sources */,
-				77BDDB1C1F92E5DA00CF0439 /* CardGroup.swift in Sources */,
-				77BDDB1E1F92E5DD00CF0439 /* CardHighlight.swift in Sources */,
-				77BDDB1A1F92E5D700CF0439 /* CardArticle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +435,7 @@
 		};
 		77661B991F92A5E3002B48FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE9D3B6101B996B8E8B50D91 /* Pods-Sialah.debug.xcconfig */;
+			baseConfigurationReference = 44B1F6ACB0C2E6D7943B2CF8 /* Pods-Sialah.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -427,7 +451,7 @@
 		};
 		77661B9A1F92A5E3002B48FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CCDB473ABBB11CD35151ED7 /* Pods-Sialah.release.xcconfig */;
+			baseConfigurationReference = 6DD84F12F1B15D53D60B406D /* Pods-Sialah.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
