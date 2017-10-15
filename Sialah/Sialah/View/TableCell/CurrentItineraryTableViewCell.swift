@@ -113,8 +113,8 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
                 cell.openingHoursLabel.text = ""
             }
 
-            cell.checklistButton.isHidden = false
-            cell.checklistButton.isEnabled = true
+//            cell.checklistButton.isHidden = false
+//            cell.checklistButton.isEnabled = true
             cell.directionsButton.isHidden = true
             cell.ticketsButton.isHidden = true
             cell.directionsButton.isEnabled = false

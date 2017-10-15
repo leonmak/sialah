@@ -22,6 +22,20 @@ class FoodVC: UIViewController {
         
         let card = initEvents()
         let _ = initMoreEvents(card)
+
+        initBackBtn()
+    }
+
+    func initBackBtn() {
+        let backBtnFrame = CGRect(x: X(75), y: Y(insets), width: X(21), height: 30.0)
+        let backBtn = ColoredBtn(frame: backBtnFrame, title: "Back", color: UIColor.flatGrayDark)
+        backBtn.layer.shadowOpacity = 0
+        backBtn.addTarget(self, action: #selector(self.backPressed(_:)), for: .touchUpInside)
+        self.view.addSubview(backBtn)
+    }
+
+    @objc func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 
     func initEvents() -> Card? {

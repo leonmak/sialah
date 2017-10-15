@@ -28,7 +28,7 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     var modelIndex: Int?
 
     @IBAction func handleDirectionsButtonPressed(_ sender: Any) {
-        UIApplication.shared.open(URL(string: "https://www.google.com/maps/dir/?api=1&destination=hyatt+hotel+singapore")!, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: "https://www.google.com/maps/dir/?api=1&origin=Changi+Airport+Singapore&destination=hyatt+hotel+singapore")!, options: [:], completionHandler: nil)
     }
 
     @IBAction func handleTicketButtonPressed(_ sender: Any) {
