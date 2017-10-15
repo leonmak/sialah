@@ -90,6 +90,7 @@ extension CurrentItineraryTableViewCell: UICollectionViewDataSource {
     private func prepareButtons(for cell: InnerCurrentItineraryCollectionViewCell) {
         prepare(button: cell.directionsButton)
         prepare(button: cell.ticketsButton)
+        prepare(button: cell.doneButton)
     }
 
     private func prepare(button: DynamicButton) {

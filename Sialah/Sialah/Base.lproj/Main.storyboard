@@ -84,7 +84,7 @@
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh1-Uv-MUg" customClass="DynamicButton" customModule="DynamicButton">
-                                                                                        <rect key="frame" x="226" y="183" width="50" height="50"/>
+                                                                                        <rect key="frame" x="173" y="181" width="50" height="50"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                                         <state key="normal" image="icon_map"/>
@@ -97,18 +97,18 @@
                                                                                             <action selector="handleDirectionsButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="4zN-sK-FzO"/>
                                                                                         </connections>
                                                                                     </button>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-fy-ZSi" customClass="DynamicButton" customModule="DynamicButton">
-                                                                                        <rect key="frame" x="294" y="183" width="50" height="50"/>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR2-Ai-Bp0" customClass="DynamicButton" customModule="DynamicButton">
+                                                                                        <rect key="frame" x="294" y="181" width="50" height="50"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                                                        <state key="normal" image="icons_ticket"/>
+                                                                                        <state key="normal" image="icons_done"/>
                                                                                         <userDefinedRuntimeAttributes>
                                                                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                                                                 <real key="value" value="0.0"/>
                                                                                             </userDefinedRuntimeAttribute>
                                                                                         </userDefinedRuntimeAttributes>
                                                                                         <connections>
-                                                                                            <action selector="handleTicketButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="OtS-qa-zSB"/>
+                                                                                            <action selector="handleTicketButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="Pth-gU-sjO"/>
                                                                                         </connections>
                                                                                     </button>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-c3-7wA">
@@ -146,6 +146,20 @@
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-fy-ZSi" customClass="DynamicButton" customModule="DynamicButton">
+                                                                                        <rect key="frame" x="233" y="181" width="50" height="50"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                                        <state key="normal" image="icons_ticket"/>
+                                                                                        <userDefinedRuntimeAttributes>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                                                                <real key="value" value="0.0"/>
+                                                                                            </userDefinedRuntimeAttribute>
+                                                                                        </userDefinedRuntimeAttributes>
+                                                                                        <connections>
+                                                                                            <action selector="handleTicketButtonPressed:" destination="qDC-N0-lEY" eventType="touchUpInside" id="OtS-qa-zSB"/>
+                                                                                        </connections>
+                                                                                    </button>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             </view>
@@ -159,6 +173,7 @@
                                                                 <outlet property="backgroundImageView" destination="It4-rn-Und" id="srM-bn-eQa"/>
                                                                 <outlet property="card" destination="dB5-vB-rmW" id="zKf-RG-Hgj"/>
                                                                 <outlet property="directionsButton" destination="Uh1-Uv-MUg" id="BP8-l4-asr"/>
+                                                                <outlet property="doneButton" destination="AR2-Ai-Bp0" id="IiP-ox-5fB"/>
                                                                 <outlet property="itineraryTitle" destination="Yvq-eY-HTK" id="X61-XA-Fy5"/>
                                                                 <outlet property="overlayView" destination="Ms6-a5-gEh" id="ty0-IW-KS8"/>
                                                                 <outlet property="ticketsButton" destination="k8L-fy-ZSi" id="glW-7f-0Df"/>
@@ -286,6 +301,7 @@
     <resources>
         <image name="Merlion-Sentosa-1024x675" width="1024" height="675"/>
         <image name="icon_map" width="50" height="50"/>
+        <image name="icons_done" width="50" height="50"/>
         <image name="icons_ticket" width="50" height="50"/>
     </resources>
 </document>

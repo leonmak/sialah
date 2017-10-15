@@ -17,6 +17,7 @@ class InnerCurrentItineraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var itineraryTitle: UILabel!
     @IBOutlet weak var directionsButton: DynamicButton!
     @IBOutlet weak var ticketsButton: DynamicButton!
+    @IBOutlet weak var doneButton: DynamicButton!
 
     var modelIndex: Int?
 
