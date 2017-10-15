@@ -15,17 +15,17 @@ class SelectionViewController: UIViewController {
 
         initCards()
     }
-    @IBOutlet weak var stopoverBorder: UIView!
-
-    @IBOutlet weak var layoverBorder: UIView!
+//    @IBOutlet weak var stopoverBorder: UIView!
+//
+//    @IBOutlet weak var layoverBorder: UIView!
     func initCards() {
-        layoverBorder.layer.borderWidth = 5
-        layoverBorder.layer.borderColor = UIColor.flatBlueDark.cgColor
-        layoverBorder.layer.cornerRadius = 20
-
-        stopoverBorder.layer.borderWidth = 5
-        stopoverBorder.layer.borderColor = UIColor.flatBlueDark.cgColor
-        stopoverBorder.layer.cornerRadius = 20
+//        layoverBorder.layer.borderWidth = 5
+//        layoverBorder.layer.borderColor = UIColor.flatBlueDark.cgColor
+//        layoverBorder.layer.cornerRadius = 20
+//
+//        stopoverBorder.layer.borderWidth = 5
+//        stopoverBorder.layer.borderColor = UIColor.flatBlueDark.cgColor
+//        stopoverBorder.layer.cornerRadius = 20
     }
 
     override var prefersStatusBarHidden: Bool {
