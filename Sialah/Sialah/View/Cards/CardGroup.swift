@@ -14,7 +14,7 @@ class CardGroup: Card {
     var title: String = "Welcome to XI Cards !"
     var titleSize: CGFloat = 26
     var subtitle: String = "from the editors"
-    var subtitleSize: CGFloat = 26
+    var subtitleSize: CGFloat = 30
     var blurEffect: UIBlurEffectStyle = UIBlurEffectStyle.extraLight
     
     // Delegate
@@ -61,25 +61,22 @@ class CardGroup: Card {
         //Draw
         super.draw(rect)
         
-        subtitleLbl.frame = CGRect(x: X(insets), y: X(insets), width: X(100-(insets*2)), height: Y(5))
+        subtitleLbl.frame = CGRect(x: X(insets), y: X(insets), width: X(100-(insets*2)), height: Y(15))
         subtitleLbl.text = subtitle.uppercased()
-        subtitleLbl.textColor = textColor
+        subtitleLbl.textColor = UIColor.flatBlackDark
         subtitleLbl.font = UIFont.systemFont(ofSize: subtitleSize, weight: .semibold)
         subtitleLbl.adjustsFontSizeToFitWidth = true
         subtitleLbl.minimumScaleFactor = 0.1
         subtitleLbl.lineBreakMode = .byTruncatingTail
         subtitleLbl.numberOfLines = 0
         
-        titleLbl.frame = CGRect(x: X(insets), y: Y(2, from: subtitleLbl), width: X(100-(insets*2)), height: Y(15))
+        titleLbl.frame = CGRect(x: X(insets), y: Y(2, from: subtitleLbl), width: X(100-(insets*2)), height: Y(65))
         titleLbl.textColor = textColor
         titleLbl.text = title
         titleLbl.font = UIFont.systemFont(ofSize: titleSize, weight: .bold)
-        titleLbl.adjustsFontSizeToFitWidth = true
-        titleLbl.minimumScaleFactor = 0.1
         titleLbl.lineBreakMode = .byTruncatingTail
         titleLbl.numberOfLines = 2
         titleLbl.sizeToFit()
-        //subtitleLbl.backgroundColor = UIColor.blue
         
         blurV.frame = CGRect(x: 0, y: 0, width: rect.width, height: Y(insets*2) + subtitleLbl.frame.size.height + titleLbl.frame.height)
         let blur = UIBlurEffect(style: blurEffect)
